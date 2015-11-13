@@ -1,7 +1,11 @@
 body {
   margin: 0;
-  background: #222;
+  background: #111;
   font-family: OA; }
+
+* {
+  box-sizing: border-box;
+  position: relative; }
 
 @font-face {
   font-family: OA;
@@ -13,6 +17,7 @@ h1 {
   border-bottom: 2px solid #0046C8; }
 
 header {
+  z-index: 1001;
   height: 6rem;
   width: 100%;
   position: fixed;
@@ -44,7 +49,6 @@ header {
     background: rgba(0, 0, 0, 0.2);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
     header .headerskirt .button {
-      position: relative;
       height: 2rem;
       top: calc(-1rem - 2px);
       width: 6rem;
@@ -67,11 +71,11 @@ main {
   margin-right: 6rem;
   box-shadow: 0 0 0.5rem #244279;
   border: 1px solid #244279;
-  background: #2A2A2A; }
+  background: #222; }
   main .hugetext {
     font-size: 1.5rem;
     text-align: center;
-    text-shadow: 0 0 10px #000;
-    color: #0046C8; }
+    text-shadow: 0 -2px 0 #444;
+    color: #040404; }
 
 /*# sourceMappingURL=main.css.map */
