@@ -5,9 +5,12 @@ body {
 
 @font-face {
   font-family: OA;
-  src: url("res/OperationalAmplifier.woff"); }
+  src: url("res/Interceptor.otf"); }
 #logo {
   height: 100%; }
+
+h1 {
+  border-bottom: 2px solid #0046C8; }
 
 header {
   height: 6rem;
@@ -52,8 +55,20 @@ header {
       align-items: center;
       background: linear-gradient(to bottom, #111, #000);
       border-top: 2px solid #0046C8;
-      font-size: 2rem;
+      font-size: 1rem;
       color: #377DFF;
       box-shadow: 0 -0.1rem 0.4rem #0046C8; }
+
+main {
+  margin-top: 6rem;
+  padding-top: 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  box-shadow: 0 0 0.5rem #000; }
+  main .hugetext {
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 0 0 10px #0046C8, 0 0 10px #0046C8;
+    color: #0A0A0A; }
 
 /*# sourceMappingURL=main.css.map */
