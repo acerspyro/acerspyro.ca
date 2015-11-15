@@ -1,5 +1,7 @@
 body {
 	margin: 0;
+	min-width: 30rem;
+	min-height: 16rem;
 	background: #111;
 	color: #377DFF;
 	text-shadow: 0 2px 2px #000;
@@ -143,6 +145,80 @@ header {
 	}
 }
 
+.messageboxcontainer {
+	z-index: 999;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	top: 6rem;
+	width: 100%;
+	
+	perspective-origin: center top;
+	perspective: 700px;
+	transform-style: preserve-3d;
+	.messagebox {
+		height: 12rem;
+		width: 50%;
+		box-shadow: 0 0 0.5rem #000;
+		border: 1px solid #244279;
+		border-top: 0 solid #244279;
+		background: url('res/bg1.svg') #222 top left/500px 500px no-repeat;
+		margin: 0;
+		transform-origin: center top;
+		transform: rotateX(-90deg);
+		backface-visibility: hidden;
+		opacity: 0;
+		transition: opacity 0.25s ease, transform 0.25s ease;
+		&.open {
+			transform: rotateX(0deg);
+			opacity: 1;
+			transition: opacity 0.25s ease, transform 0.25s ease;
+		}
+		#_MESSAGE {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+			max-height: 100%;
+			padding: 2rem 10%;
+			text-align: center;
+			word-wrap: break-word;
+			overflow: auto;
+		}
+		.messageskirt {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			top: 100%;
+			left: -1px;
+			height: 1rem;
+			width: calc(100% + 2px);
+			background: rgba(0,0,0,0.4);
+			border-bottom: 2px solid rgba(255,255,255,0.1);
+			border-bottom-left-radius: 0.5rem;
+			border-bottom-right-radius: 0.5rem;
+			.button {
+				@include noselect;
+				font-family: Interceptor;
+				cursor: pointer;
+				height: 2rem;
+				width: 8rem;
+				top: calc(-1rem - 2px);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				background: linear-gradient(to bottom, transparentize(#111, 0.5), transparentize(#000, 0));
+				border-top: 2px solid #0046C8;
+				font-size: 1rem;
+				color: #377DFF;
+				box-shadow: 0 -0.1rem 0.4rem #0046C8;
+			}
+		}
+	}
+}
+
 main {
 	margin-top: 6rem;
 	margin-bottom: 4rem;
@@ -182,5 +258,67 @@ section {
 		border-bottom: 2px solid #0046C8;
 		border-image: linear-gradient(to right, transparent, #0046C8 50%, transparent) 1 100%;
 		border-image-slice: 1;
+	}
+}
+
+@media (max-width: 60rem) {
+	header {
+		height: 3rem;
+		.headercontainer {
+			.headerdetail {
+				left: 13rem;
+				width: calc(100% - 11rem);
+			}
+		}
+		.headerskirt {
+			height: 0.5rem;
+			border-bottom: 1px solid rgba(255,255,255,0.1);
+			.button {
+				height: 1rem;
+				width: 4rem;
+				top: calc(-0.5rem - 1px);
+				font-size: 0.5rem;
+				border-top: 1px solid #0046C8;
+				box-shadow: 0 -0.1rem 0.2rem #0046C8;
+				margin: 0 0.5rem;
+			}
+		}
+	}
+	.messageboxcontainer {
+		top: 3rem;
+		.messagebox {
+			width: 80%;
+			#_MESSAGE {
+				padding: 1rem 10%;
+				font-size: 0.75rem;
+			}
+			.messageskirt {
+				height: 0.5rem;
+				border-bottom: 1px solid rgba(255,255,255,0.1);
+				border-bottom-left-radius: 0.25rem;
+				border-bottom-right-radius: 0.25rem;
+				.button {
+					height: 1rem;
+					width: 4rem;
+					top: calc(-0.5rem - 1px);
+					font-size: 0.5rem;
+					border-top: 1px solid #0046C8;
+					box-shadow: 0 -0.1rem 0.2rem #0046C8;
+					margin: 0 0.5rem;
+				}
+			}
+		}
+	}
+	main {
+		margin-top: 3rem;
+		margin-bottom: 2rem;
+		padding: 1rem;
+		margin-left: 2rem;
+		margin-right: 2rem;
+		.panelcontainer {
+			.sectionpanel {
+				width: 100%;
+			}
+		}
 	}
 }

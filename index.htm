@@ -15,11 +15,20 @@
 		<div class='headerskirt'>
 			<div id='_CODEPEN_BUTTON' class='button' onclick="window.open('http://codepen.io/acerspyro/', '_blank');"></div>
 			<div id='_GITHUB_BUTTON' class='button' onclick="window.open('https://github.com/acerspyro/', '_blank');"></div>
-			<div id='_CONTACT_BUTTON' class='button'></div>
-			<div id='_ABOUT_BUTTON' class='button'></div>
+			<div id='_CONTACT_BUTTON' class='button' onclick="openContactDialog()"></div>
+			<div id='_ABOUT_BUTTON' class='button' onclick="openAboutDialog()"></div>
 			<div id='_LANG_BUTTON' class='button' onclick="changeLang()"></div>
 		</div>
 	</header>
+	<div class='messageboxcontainer'>
+		<div class='messagebox'>
+			<div id='_MESSAGE'>
+			</div>
+			<div class='messageskirt'>
+				<div id='_CLOSE_BUTTON' class='button' onclick="closeDialog()"></div>
+			</div>
+		</div>
+	</div>
 	<main>
 		<span id='_TOP_TEXT' class='hugetext'>
 		</span>
