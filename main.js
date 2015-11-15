@@ -1,4 +1,12 @@
 var lang;
+
+function changeLang() {
+	if (lang=='en')
+		document.cookie='lang=fr';
+	else
+		document.cookie='lang=en';
+	location.reload();
+}
 function init() {
 	var c=document.cookie.split(';');
 	for (i=0;i<c.length;i++) {
