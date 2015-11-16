@@ -148,11 +148,12 @@ header {
 	justify-content: center;
 	top: 6rem;
 	width: 100%;
-	
+	pointer-events: none;
 	perspective-origin: center top;
 	perspective: 700px;
 	transform-style: preserve-3d;
 	.messagebox {
+		pointer-events: auto;
 		height: 12rem;
 		width: 50%;
 		box-shadow: 0 0 0.5rem #000;
