@@ -10,7 +10,7 @@ body {
 
 @mixin noselect {
 	-webkit-touch-callout: none;
-    user-select: none;
+	user-select: none;
 }
 
 * {
@@ -19,13 +19,13 @@ body {
 }
 
 @font-face {
-    font-family: Interceptor;
-    src: url('res/Interceptor.otf');
+	font-family: Interceptor;
+	src: url('res/Interceptor.otf');
 }
 
 @font-face {
-    font-family: Xolonium;
-    src: url('res/Xolonium-Regular.otf');
+	font-family: Xolonium;
+	src: url('res/Xolonium-Regular.otf');
 }
 
 .centered {
@@ -106,6 +106,7 @@ header {
 			left: 26rem;
 			top: 0;
 			width: calc(100% - 24rem);
+                        width: -webkit-calc(100% - 24rem);
 			transform: skew(25deg);
 			box-shadow: 0 0 1.3rem #0046C8, 0 0 1.3rem #0046C8;
 			height: 100%;
@@ -126,6 +127,7 @@ header {
 			cursor: pointer;
 			height: 2rem;
 			top: calc(-1rem - 2px);
+                        top: -webkit-calc(-1rem - 2px);
 			width: 8rem;
 			display: flex;
 			margin: 0 1rem;
@@ -191,6 +193,7 @@ header {
 			left: -1px;
 			height: 1rem;
 			width: calc(100% + 2px);
+                        width: -webkit-calc(100% + 2px);
 			background: rgba(0,0,0,0.4);
 			border-bottom: 2px solid rgba(255,255,255,0.1);
 			border-bottom-left-radius: 0.5rem;
@@ -202,6 +205,7 @@ header {
 				height: 2rem;
 				width: 8rem;
 				top: calc(-1rem - 2px);
+                                top: -webkit-calc(-1rem - 2px);
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -265,19 +269,21 @@ section {
 			.headerdetail {
 				left: 13rem;
 				width: calc(100% - 11rem);
+                                width: -webkit-calc(100% - 11rem);
 			}
 		}
 		.headerskirt {
 			height: 0.5rem;
 			border-bottom: 1px solid rgba(255,255,255,0.1);
 			.button {
-				height: 1rem;
-				width: 4rem;
-				top: calc(-0.5rem - 1px);
-				font-size: 0.5rem;
+				height: 1.5rem;
+				width: 5rem;
+				top: calc(-1rem - 1px);
+                                top: -webkit-calc(-0.5rem - 1px);
+				font-size: 0.75rem;
 				border-top: 1px solid #0046C8;
 				box-shadow: 0 -0.1rem 0.2rem #0046C8;
-				margin: 0 0.5rem;
+				margin: 0 0.15rem;
 			}
 		}
 	}
@@ -295,9 +301,10 @@ section {
 				border-bottom-left-radius: 0.25rem;
 				border-bottom-right-radius: 0.25rem;
 				.button {
-					height: 1rem;
-					width: 4rem;
-					top: calc(-0.5rem - 1px);
+					height: 1.5rem;
+					width: 5rem;
+					top: calc(-1rem - 1px);
+                                        top: -webkit-calc(-0.5rem - 1px);
 					font-size: 0.5rem;
 					border-top: 1px solid #0046C8;
 					box-shadow: 0 -0.1rem 0.2rem #0046C8;
@@ -307,6 +314,7 @@ section {
 		}
 	}
 	main {
+		font-size: 1.5rem;
 		margin-top: 3rem;
 		margin-bottom: 2rem;
 		padding: 1rem;
