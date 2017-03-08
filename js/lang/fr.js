@@ -51,11 +51,9 @@ langres = {
 						L'art graphique est ma chose, mes graphiques raster originent souvent d'Inkscape pour être par la suite édités dans GIMP.\
 					</p>",
 	"_SECTION_PROJECTS": "<h3>Projets et contributions</h3>\
-					<ul>\
-						<li><a href='http://filsdelaliberte.com/' target=\"_blank\">Site web des Fils de la Liberté</a></li>\
-						<li><a href='http://github.com/graphitemaster/neothyne/' target=\"_blank\">Répertoire de Neothyne sur GitHub</a></li>\
-						<li><a href='https://github.com/red-eclipse/' target=\"_blank\">Projet Red Eclipse sur GitHub</a></li>\
-					</ul>"
+						<p><a href='http://filsdelaliberte.com/' target=\"_blank\">Site web des Fils de la Liberté</a></p>\
+						<p><a href='http://github.com/graphitemaster/neothyne/' target=\"_blank\">Répertoire de Neothyne sur GitHub</a></p>\
+						<p><a href='https://github.com/red-eclipse/' target=\"_blank\">Projet Red Eclipse sur GitHub</a></p>"
 };
 
 for (var prop in langres) {

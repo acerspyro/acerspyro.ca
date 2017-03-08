@@ -5,7 +5,7 @@ body {
 	min-width: 30rem;
 	min-height: 16rem;
 	background: #111;
-	color: #377DFF;
+	color: #AAA;
 	text-shadow: 0 2px 2px #000;
 	font-family: Ubuntu;
 	-webkit-text-size-adjust:none;
@@ -47,9 +47,7 @@ iframe {
 a {
 	&:link, &:visited, &:hover, &:active {
 		border: 0 solid transparent;
-		border-bottom: 1px solid #0046C8;
-		border-image: linear-gradient(to right, transparent, #377DFF 50%, transparent) 1 100%;
-		border-image-slice: 1;
+		border-bottom: 2px solid #0046C8;
 		cursor: pointer;
 		text-decoration: none;
 		color: inherit;
@@ -58,8 +56,8 @@ a {
 
 h1 {
 	border: 0 solid transparent;
-	border-bottom: 2px solid #0046C8;
-	border-image: linear-gradient(to right, transparent, #0046C8 50%, transparent) 1 100%;
+	border-bottom: 2px solid #F80;
+	border-image: linear-gradient(to right, transparent, #F80 50%, transparent) 1 100%;
 	border-image-slice: 1;
 }
 
@@ -112,26 +110,22 @@ header {
 		display: flex;
 		justify-content: flex-end;
 		top: 100%;
-		height: 1rem;
 		width: 100%;
-		background: rgba(0,0,0,0.4);
-		border-bottom: 2px solid rgba(255,255,255,0.1);
 		.button {
 			cursor: pointer;
 			height: 2rem;
-			top: calc(-1rem - 2px);
-			top: -webkit-calc(-1rem - 2px);
+			top: -2rem;
 			width: 8rem;
 			display: flex;
 			margin: 0 1rem;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			background: linear-gradient(to bottom, transparentize(#111, 0.5), transparentize(#000, 0));
+			background: #111;
 			border-top: 2px solid #0046C8;
 			font-size: 1.5rem;
 			color: #377DFF;
-			box-shadow: 0 -0.1rem 0.4rem #0046C8;
+			//box-shadow: 0 -0.1rem 0.4rem #0046C8;
 		}
 	}
 }
@@ -181,32 +175,24 @@ header {
 			position: absolute;
 			display: flex;
 			justify-content: center;
-			top: 100%;
 			left: -1px;
-			height: 1rem;
 			width: calc(100% + 2px);
-                        width: -webkit-calc(100% + 2px);
-			background: rgba(0,0,0,0.4);
-			border-bottom: 2px solid rgba(255,255,255,0.1);
-			border-bottom-left-radius: 0.5rem;
-			border-bottom-right-radius: 0.5rem;
 			.button {
 				@include noselect;
 				font-family: Dosis;
 				cursor: pointer;
 				height: 2rem;
 				width: 8rem;
-				top: calc(-1rem - 2px);
-				top: -webkit-calc(-1rem - 2px);
+				top: -2rem;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				background: linear-gradient(to bottom, transparentize(#111, 0.5), transparentize(#000, 0));
+				background: #111;
 				border-top: 2px solid #0046C8;
 				font-size: 1.5rem;
 				color: #377DFF;
-				box-shadow: 0 -0.1rem 0.4rem #0046C8;
+				//box-shadow: 0 -0.1rem 0.4rem #0046C8;
 			}
 		}
 	}
@@ -222,7 +208,7 @@ main {
 	box-shadow: 0 0 0.5rem #244279;
 	border: 1px solid #244279;
 	border-top: 0 solid #244279;
-	background: url('../res/bg1.svg') #222 top left/500px 500px no-repeat;
+	background: url('../res/bg1.svg') #222 top left/1000px 1000px no-repeat;
 	.hugetext {
 		font-size: 1.5rem;
 		text-align: center;
@@ -240,17 +226,14 @@ main {
 }
 
 section {
-	border: 2px solid transparent;
+	font-size: 1.25rem;
+	line-height: 1.8rem;
 	padding: 1rem;
 	padding-top: 0;
-	border-image: linear-gradient(to bottom right, #0046C8, transparent 50%) 1 100%;
-	border-image-slice: 1;
 	h3 {
 		display: inline-block;
 		border: 0 solid transparent;
-		border-bottom: 2px solid #0046C8;
-		border-image: linear-gradient(to right, transparent, #0046C8 50%, transparent) 1 100%;
-		border-image-slice: 1;
+		border-bottom: 2px solid #F80;
 	}
 }
 
@@ -263,16 +246,11 @@ section {
 			}
 		}
 		.headerskirt {
-			//height: 0.5rem;
-			//border-bottom: 1px solid rgba(255,255,255,0.1);
 			.button {
 				height: 4rem;
-				//width: 5rem;
-				top: calc(-3rem - 1px);
-				top: -webkit-calc(-3rem - 1px);
+				top: -3.9rem;
 				font-size: 2rem;
 				border-top: 1px solid #0046C8;
-				//box-shadow: 0 -0.1rem 0.2rem #0046C8;
 				margin: 0 0.15rem;
 			}
 		}
@@ -287,20 +265,15 @@ section {
 			.messageskirt {
 				.button {
 					height: 4rem;
-					//width: 5rem;
-					top: calc(-3rem - 1px);
-					top: -webkit-calc(-3rem - 1px);
+					top: -4rem;
 					font-size: 2rem;
 					border-top: 1px solid #0046C8;
-					//box-shadow: 0 -0.1rem 0.2rem #0046C8;
 					margin: 0 0.15rem;
 				}
 			}
 		}
 	}
 	main {
-		font-size: 1.5rem;
-		//margin-top: 3rem;
 		margin-bottom: 2rem;
 		padding: 1rem;
 		margin-left: 2rem;
@@ -309,6 +282,14 @@ section {
 			.sectionpanel {
 				width: 100%;
 			}
+		}
+	}
+	section {
+		font-size: 2.5rem;
+		line-height: 4rem;
+		h3 {
+			text-align: center;
+			width: 100%;
 		}
 	}
 }

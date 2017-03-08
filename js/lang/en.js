@@ -2,7 +2,7 @@
 
 var _ABOUT_MSG = "\
 <p>\
-	This site was made by hand with love and passion, using HTML5, SCSS and JS6.\
+	This site was made by hand with love and passion using HTML5, SCSS and JS6.\
 </p>\
 <p>\
 	Last revision made on March 7, 2017.<br/>Design by Maxim \"Acerspyro\" Therrien (if it wasn't obvious).\
@@ -58,11 +58,9 @@ langres = {
 						Vector art assets are my thing, even my raster graphics often start out as vector art in Inkscape.\
 					</p>",
 	"_SECTION_PROJECTS": "<h3>Projects and Contributions</h3>\
-					<ul>\
-						<li><a href='http://filsdelaliberte.com/' target=\"_blank\">Website for <i>Les Fils de la Liberté</i> (French)</a></li>\
-						<li><a href='https://github.com/graphitemaster/neothyne/' target=\"_blank\">Neothyne's repository on GitHub</a></li>\
-						<li><a href='https://github.com/red-eclipse/' target=\"_blank\">Red Eclipse's project GitHub</a></li>\
-					</ul>"
+						<p><a href='http://filsdelaliberte.com/' target=\"_blank\">Website for <i>Les Fils de la Liberté</i> (French)</a></p>\
+						<p><a href='https://github.com/graphitemaster/neothyne/' target=\"_blank\">Neothyne's repository on GitHub</a></p>\
+						<p><a href='https://github.com/red-eclipse/' target=\"_blank\">Red Eclipse's project GitHub</a></p>"
 };
 
 for (var prop in langres) {
