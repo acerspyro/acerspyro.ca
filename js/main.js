@@ -62,9 +62,9 @@ function init() {
 	var fileref = document.createElement('script');
 	fileref.setAttribute("type","text/javascript");
 	if (lang == 'en')
-		fileref.setAttribute("src", "lang/en.js");
+		fileref.setAttribute("src", "js/lang/en.js");
 	else
-		fileref.setAttribute("src", "lang/fr.js");
+		fileref.setAttribute("src", "js/lang/fr.js");
 	document.getElementsByTagName("head")[0].appendChild(fileref);
 }
 

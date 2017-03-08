@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Ubuntu');
+
 body {
 	margin: 0;
 	min-width: 30rem;
@@ -5,7 +7,8 @@ body {
 	background: #111;
 	color: #377DFF;
 	text-shadow: 0 2px 2px #000;
-	font-family: Xolonium;
+	font-family: Ubuntu;
+	-webkit-text-size-adjust:none;
 }
 
 @mixin noselect {
@@ -18,16 +21,6 @@ body {
 	position: relative;
 }
 
-@font-face {
-	font-family: Interceptor;
-	src: url('res/Interceptor.otf');
-}
-
-@font-face {
-	font-family: Xolonium;
-	src: url('res/Xolonium-Regular.otf');
-}
-
 .centered {
 	text-align: center;
 }
@@ -38,7 +31,7 @@ ul {
 }
 
 li {
-	margin: 1rem 0;
+	margin: 1em 0;
 	padding: 0;
 	list-style: none;
 	text-align: center;
@@ -71,27 +64,27 @@ h1 {
 }
 
 h3 {
-	margin-bottom: 0.2rem;
+	margin-bottom: 0.2em;
 }
 
 h1, h2, h3, h4 {
-	color: #000;
-	text-shadow: 0 0 0.1em #0046C8, 0 0 0.1em #0046C8;
-	font-family: Interceptor;
+	color: #FFF;
+	//text-shadow: 0 0 0.1em #0046C8, 0 0 0.1em #0046C8;
+	font-family: Dosis;
 	letter-spacing: 0.1em;
 	font-weight: normal;
 }
 
 header {
 	@include noselect;
-	font-family: Interceptor;
+	font-family: Dosis;
 	z-index: 1001;
 	height: 6rem;
 	width: 100%;
 	position: fixed;
 	display: flex;
 	top: 0;
-	background: #333;
+	background: linear-gradient(58deg,  #555 15rem, #050505 15.1rem, #050505 15.5rem, #F80 15.6rem, #840 100%);
 	box-shadow: 0 0 0.5rem #000;
 	.headercontainer {
 		position: absolute;
@@ -100,18 +93,18 @@ header {
 		overflow: hidden;
 		#logo {
 			height: 100%;
+			left: 8rem;
 		}
 		.headerdetail {
 			position: absolute;
-			left: 26rem;
+			left: 24rem;
 			top: 0;
-			width: calc(100% - 24rem);
-                        width: -webkit-calc(100% - 24rem);
-			transform: skew(25deg);
-			box-shadow: 0 0 1.3rem #0046C8, 0 0 1.3rem #0046C8;
+			width: calc(100% - 12rem);
+      width: -webkit-calc(100% - 12rem);
+			transform: skew(32deg);
 			height: 100%;
 			backface-visibility: hidden;
-			background: linear-gradient(to right, #0A0A0A -10%, #3C3C3C 10%, #0A0A0A 100%);
+			background: transparent;
 		}
 	}
 	.headerskirt {
@@ -136,7 +129,7 @@ header {
 			align-items: center;
 			background: linear-gradient(to bottom, transparentize(#111, 0.5), transparentize(#000, 0));
 			border-top: 2px solid #0046C8;
-			font-size: 1rem;
+			font-size: 1.5rem;
 			color: #377DFF;
 			box-shadow: 0 -0.1rem 0.4rem #0046C8;
 		}
@@ -156,12 +149,11 @@ header {
 	transform-style: preserve-3d;
 	.messagebox {
 		pointer-events: auto;
-		height: 12rem;
 		width: 50%;
 		box-shadow: 0 0 0.5rem #000;
 		border: 1px solid #244279;
 		border-top: 0 solid #244279;
-		background: url('res/bg1.svg') #222 top left/500px 500px no-repeat;
+		background: url('../res/bg1.svg') #222 top left/500px 500px no-repeat;
 		margin: 0;
 		transform-origin: center top;
 		transform: rotateX(-90deg);
@@ -180,7 +172,7 @@ header {
 			align-items: center;
 			width: 100%;
 			max-height: 100%;
-			padding: 2rem 10%;
+			padding: 2rem 4rem;
 			text-align: center;
 			word-wrap: break-word;
 			overflow: auto;
@@ -200,7 +192,7 @@ header {
 			border-bottom-right-radius: 0.5rem;
 			.button {
 				@include noselect;
-				font-family: Interceptor;
+				font-family: Dosis;
 				cursor: pointer;
 				height: 2rem;
 				width: 8rem;
@@ -212,7 +204,7 @@ header {
 				align-items: center;
 				background: linear-gradient(to bottom, transparentize(#111, 0.5), transparentize(#000, 0));
 				border-top: 2px solid #0046C8;
-				font-size: 1rem;
+				font-size: 1.5rem;
 				color: #377DFF;
 				box-shadow: 0 -0.1rem 0.4rem #0046C8;
 			}
@@ -230,7 +222,7 @@ main {
 	box-shadow: 0 0 0.5rem #244279;
 	border: 1px solid #244279;
 	border-top: 0 solid #244279;
-	background: url('res/bg1.svg') #222 top left/500px 500px no-repeat;
+	background: url('../res/bg1.svg') #222 top left/500px 500px no-repeat;
 	.hugetext {
 		font-size: 1.5rem;
 		text-align: center;
@@ -263,61 +255,52 @@ section {
 }
 
 @media (max-width: 60rem), (max-aspect-ratio: 1/1) {
-	@media (min-width: 60rem) {
-		header {
-			height: 3rem;
-			.headercontainer {
-				.headerdetail {
-					left: 13rem;
-					width: calc(100% - 11rem);
-									width: -webkit-calc(100% - 11rem);
-				}
-			}
-			.headerskirt {
-				height: 0.5rem;
-				border-bottom: 1px solid rgba(255,255,255,0.1);
-				.button {
-					height: 1.5rem;
-					width: 5rem;
-					top: calc(-1rem - 1px);
-					top: -webkit-calc(-1rem - 1px);
-					font-size: 0.75rem;
-					border-top: 1px solid #0046C8;
-					box-shadow: 0 -0.1rem 0.2rem #0046C8;
-					margin: 0 0.15rem;
-				}
+	header {
+		.headercontainer {
+			background: linear-gradient(58deg,  #555 8rem, #050505 8.1rem, #050505 8.5rem, #F80 8.6rem, #840 100%);
+			#logo {
+				left: 0;
 			}
 		}
-		.messageboxcontainer {
-			top: 3rem;
-			.messagebox {
-				width: 80%;
-				#_MESSAGE {
-					padding: 1rem 10%;
-					font-size: 0.75rem;
-				}
-				.messageskirt {
-					height: 0.5rem;
-					border-bottom: 1px solid rgba(255,255,255,0.1);
-					border-bottom-left-radius: 0.25rem;
-					border-bottom-right-radius: 0.25rem;
-					.button {
-						height: 1.5rem;
-						width: 5rem;
-						top: calc(-1rem - 1px);
-						top: -webkit-calc(-1rem - 1px);
-						font-size: 0.5rem;
-						border-top: 1px solid #0046C8;
-						box-shadow: 0 -0.1rem 0.2rem #0046C8;
-						margin: 0 0.5rem;
-					}
+		.headerskirt {
+			//height: 0.5rem;
+			//border-bottom: 1px solid rgba(255,255,255,0.1);
+			.button {
+				height: 4rem;
+				//width: 5rem;
+				top: calc(-3rem - 1px);
+				top: -webkit-calc(-3rem - 1px);
+				font-size: 2rem;
+				border-top: 1px solid #0046C8;
+				//box-shadow: 0 -0.1rem 0.2rem #0046C8;
+				margin: 0 0.15rem;
+			}
+		}
+	}
+	.messageboxcontainer {
+		.messagebox {
+			width: 90%;
+			#_MESSAGE {
+				padding: 2rem 1rem 4rem 1rem;
+				font-size: 2rem;
+			}
+			.messageskirt {
+				.button {
+					height: 4rem;
+					//width: 5rem;
+					top: calc(-3rem - 1px);
+					top: -webkit-calc(-3rem - 1px);
+					font-size: 2rem;
+					border-top: 1px solid #0046C8;
+					//box-shadow: 0 -0.1rem 0.2rem #0046C8;
+					margin: 0 0.15rem;
 				}
 			}
 		}
 	}
 	main {
 		font-size: 1.5rem;
-		margin-top: 3rem;
+		//margin-top: 3rem;
 		margin-bottom: 2rem;
 		padding: 1rem;
 		margin-left: 2rem;

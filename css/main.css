@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis|Ubuntu");
+body {
+  margin: 0;
+  min-width: 30rem;
+  min-height: 16rem;
+  background: #111;
+  color: #377DFF;
+  text-shadow: 0 2px 2px #000;
+  font-family: Ubuntu;
+  -webkit-text-size-adjust: none; }
+
+* {
+  box-sizing: border-box;
+  position: relative; }
+
+.centered {
+  text-align: center; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  margin: 1em 0;
+  padding: 0;
+  list-style: none;
+  text-align: center; }
+
+iframe {
+  margin: 1rem 0;
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom right, #0046C8, transparent 50%) 1 100%;
+  border-image-slice: 1; }
+
+a:link, a:visited, a:hover, a:active {
+  border: 0 solid transparent;
+  border-bottom: 1px solid #0046C8;
+  border-image: linear-gradient(to right, transparent, #377DFF 50%, transparent) 1 100%;
+  border-image-slice: 1;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit; }
+
+h1 {
+  border: 0 solid transparent;
+  border-bottom: 2px solid #0046C8;
+  border-image: linear-gradient(to right, transparent, #0046C8 50%, transparent) 1 100%;
+  border-image-slice: 1; }
+
+h3 {
+  margin-bottom: 0.2em; }
+
+h1, h2, h3, h4 {
+  color: #FFF;
+  font-family: Dosis;
+  letter-spacing: 0.1em;
+  font-weight: normal; }
+
+header {
+  -webkit-touch-callout: none;
+  user-select: none;
+  font-family: Dosis;
+  z-index: 1001;
+  height: 6rem;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  top: 0;
+  background: linear-gradient(58deg, #555 15rem, #050505 15.1rem, #050505 15.5rem, #F80 15.6rem, #840 100%);
+  box-shadow: 0 0 0.5rem #000; }
+  header .headercontainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    header .headercontainer #logo {
+      height: 100%;
+      left: 8rem; }
+    header .headercontainer .headerdetail {
+      position: absolute;
+      left: 24rem;
+      top: 0;
+      width: calc(100% - 12rem);
+      width: -webkit-calc(100% - 12rem);
+      transform: skew(32deg);
+      height: 100%;
+      backface-visibility: hidden;
+      background: transparent; }
+  header .headerskirt {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    top: 100%;
+    height: 1rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1); }
+    header .headerskirt .button {
+      cursor: pointer;
+      height: 2rem;
+      top: calc(-1rem - 2px);
+      top: -webkit-calc(-1rem - 2px);
+      width: 8rem;
+      display: flex;
+      margin: 0 1rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(17, 17, 17, 0.5), black);
+      border-top: 2px solid #0046C8;
+      font-size: 1.5rem;
+      color: #377DFF;
+      box-shadow: 0 -0.1rem 0.4rem #0046C8; }
+
+.messageboxcontainer {
+  z-index: 999;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 6rem;
+  width: 100%;
+  pointer-events: none;
+  perspective-origin: center top;
+  perspective: 700px;
+  transform-style: preserve-3d; }
+  .messageboxcontainer .messagebox {
+    pointer-events: auto;
+    width: 50%;
+    box-shadow: 0 0 0.5rem #000;
+    border: 1px solid #244279;
+    border-top: 0 solid #244279;
+    background: url("../res/bg1.svg") #222 top left/500px 500px no-repeat;
+    margin: 0;
+    transform-origin: center top;
+    transform: rotateX(-90deg);
+    backface-visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease; }
+    .messageboxcontainer .messagebox.open {
+      transform: rotateX(0deg);
+      opacity: 1;
+      transition: opacity 0.25s ease, transform 0.25s ease; }
+    .messageboxcontainer .messagebox #_MESSAGE {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      max-height: 100%;
+      padding: 2rem 4rem;
+      text-align: center;
+      word-wrap: break-word;
+      overflow: auto; }
+    .messageboxcontainer .messagebox .messageskirt {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      top: 100%;
+      left: -1px;
+      height: 1rem;
+      width: calc(100% + 2px);
+      width: -webkit-calc(100% + 2px);
+      background: rgba(0, 0, 0, 0.4);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem; }
+      .messageboxcontainer .messagebox .messageskirt .button {
+        -webkit-touch-callout: none;
+        user-select: none;
+        font-family: Dosis;
+        cursor: pointer;
+        height: 2rem;
+        width: 8rem;
+        top: calc(-1rem - 2px);
+        top: -webkit-calc(-1rem - 2px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, rgba(17, 17, 17, 0.5), black);
+        border-top: 2px solid #0046C8;
+        font-size: 1.5rem;
+        color: #377DFF;
+        box-shadow: 0 -0.1rem 0.4rem #0046C8; }
+
+main {
+  margin-top: 6rem;
+  margin-bottom: 4rem;
+  padding: 4rem;
+  padding-top: 1rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  box-shadow: 0 0 0.5rem #244279;
+  border: 1px solid #244279;
+  border-top: 0 solid #244279;
+  background: url("../res/bg1.svg") #222 top left/500px 500px no-repeat; }
+  main .hugetext {
+    font-size: 1.5rem;
+    text-align: center; }
+  main .panelcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    main .panelcontainer .sectionpanel {
+      display: flex;
+      flex-direction: column;
+      width: 50%; }
+
+section {
+  border: 2px solid transparent;
+  padding: 1rem;
+  padding-top: 0;
+  border-image: linear-gradient(to bottom right, #0046C8, transparent 50%) 1 100%;
+  border-image-slice: 1; }
+  section h3 {
+    display: inline-block;
+    border: 0 solid transparent;
+    border-bottom: 2px solid #0046C8;
+    border-image: linear-gradient(to right, transparent, #0046C8 50%, transparent) 1 100%;
+    border-image-slice: 1; }
+
+@media (max-width: 60rem), (max-aspect-ratio: 1 / 1) {
+  header .headercontainer {
+    background: linear-gradient(58deg, #555 8rem, #050505 8.1rem, #050505 8.5rem, #F80 8.6rem, #840 100%); }
+    header .headercontainer #logo {
+      left: 0; }
+  header .headerskirt .button {
+    height: 4rem;
+    top: calc(-3rem - 1px);
+    top: -webkit-calc(-3rem - 1px);
+    font-size: 2rem;
+    border-top: 1px solid #0046C8;
+    margin: 0 0.15rem; }
+  .messageboxcontainer .messagebox {
+    width: 90%; }
+    .messageboxcontainer .messagebox #_MESSAGE {
+      padding: 2rem 1rem 4rem 1rem;
+      font-size: 2rem; }
+    .messageboxcontainer .messagebox .messageskirt .button {
+      height: 4rem;
+      top: calc(-3rem - 1px);
+      top: -webkit-calc(-3rem - 1px);
+      font-size: 2rem;
+      border-top: 1px solid #0046C8;
+      margin: 0 0.15rem; }
+  main {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem; }
+    main .panelcontainer .sectionpanel {
+      width: 100%; } }
