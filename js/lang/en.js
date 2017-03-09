@@ -5,7 +5,7 @@ var _ABOUT_MSG = "\
 	This site was made by hand with love and passion using HTML5, SCSS and JS6.\
 </p>\
 <p>\
-	Last revision made on March 7, 2017.<br/>Design by Maxim \"Acerspyro\" Therrien (if it wasn't obvious).\
+	Last revision made on "+finalDate+".<br/>Design by Maxim \"Acerspyro\" Therrien (if it wasn't obvious).\
 </p>\
 <p>\
 	<a href='https://github.com/acerspyro/acerspyro.github.io/'>https://github.com/acerspyro/acerspyro.github.io/</a>\

@@ -5,7 +5,7 @@ var _ABOUT_MSG = "\
 	Ce site à été fait à la main avec amour et passion, à l'aide de HTML5, SCSS ainsi que JS6.\
 </p>\
 <p>\
-	Dernière révision effectuée le 7 Mars 2017.<br/>Design par Maxim \"Acerspyro\" Therrien (si c'était pas clair).\
+	Dernière révision effectuée le "+finalDate+".<br/>Design par Maxim \"Acerspyro\" Therrien (si c'était pas clair).\
 </p>\
 <p>\
 	<a href='https://github.com/acerspyro/acerspyro.github.io/'>https://github.com/acerspyro/acerspyro.github.io/</a>\
@@ -36,7 +36,7 @@ langres = {
 						J'étudie à l'EFPC (École de Formation Professionelle de Châteauguay) en soutien informatique.\
 						Ma langue maternelle est le Français et je réside dans la rive-sud de Montréal.\
 					</p>",
-	"_SECTION_SKILLS": "<h3>Habiletées</h3>\
+	"_SECTION_SKILLS": "<h3>Habiletés</h3>\
 					<p>\
 						Je suis très fluide en anglais aussi bien qu'en français.<br/>\
 						J'ai de la façilité à utiliser la suite Microsoft Office, ainsi que Google Docs et LibreOffice.<br/>\

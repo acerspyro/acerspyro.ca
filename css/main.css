@@ -64,7 +64,7 @@ header {
   position: fixed;
   display: flex;
   top: 0;
-  background: linear-gradient(58deg, #555 15rem, #050505 15.1rem, #050505 15.5rem, #F80 15.6rem, #840 100%);
+  background: linear-gradient(58deg, #555 15rem, #050505 15.1rem, #050505 15.5rem, #F60 15.6rem, #F40 100%);
   box-shadow: 0 0 0.5rem #000; }
   header .headercontainer {
     position: absolute;
@@ -101,7 +101,7 @@ header {
       justify-content: center;
       align-items: center;
       background: #111;
-      border-top: 2px solid #0046C8;
+      border-top: 4px solid #0046C8;
       font-size: 1.5rem;
       color: #377DFF; }
 
@@ -122,7 +122,7 @@ header {
     box-shadow: 0 0 0.5rem #000;
     border: 1px solid #244279;
     border-top: 0 solid #244279;
-    background: url("../res/bg1.svg") #222 top left/500px 500px no-repeat;
+    background: url("../res/bg1.png") #222 top left/768px 768px no-repeat;
     margin: 0;
     transform-origin: center top;
     transform: rotateX(-90deg);
@@ -177,7 +177,7 @@ main {
   box-shadow: 0 0 0.5rem #244279;
   border: 1px solid #244279;
   border-top: 0 solid #244279;
-  background: url("../res/bg1.svg") #222 top left/1000px 1000px no-repeat; }
+  background: url("../res/bg1.png") #222 top left/1024px 1024px no-repeat; }
   main .hugetext {
     font-size: 1.5rem;
     text-align: center; }
