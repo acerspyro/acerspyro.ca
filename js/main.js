@@ -1,8 +1,3 @@
-/* TODO:
- *	- Add a way to change language without cookies
- *  - BUG: Cookies not working in Chrome
- *
- */
 var lang;
 var latestChangeDate = "9/3/17"; // (D)D/(M)M/YY
 var finalDate;
@@ -13,6 +8,10 @@ function changeLang() {
 	else
 		document.cookie='lang=en;expires=999999999999999999';
 	location.reload();
+}
+
+function addVerticalScrollbars() {
+	
 }
 
 function fullFinalDate() { // My non-Y2.1K-compliant code.

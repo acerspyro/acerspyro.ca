@@ -1,8 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis|Ubuntu");
+.fscrollbar {
+  float: right;
+  height: 100%;
+  width: 8px;
+  padding: 2px; }
+  .fscrollbar .scrolltab {
+    border-radius: 2px;
+    background: #FFF; }
+
 body {
+  position: relative;
   margin: 0;
-  min-width: 30rem;
-  min-height: 16rem;
+  min-width: 660px;
+  height: 100vh;
+  overflow-y: hidden;
   background: #111;
   color: #AAA;
   text-shadow: 0 2px 2px #000;
@@ -12,6 +23,8 @@ body {
 * {
   box-sizing: border-box;
   position: relative; }
+  * ::-webkit-scrollbar {
+    display: none; }
 
 .centered {
   text-align: center; }
@@ -61,17 +74,21 @@ header {
   z-index: 1001;
   height: 6rem;
   width: 100%;
+  min-width: 660px;
   position: fixed;
   display: flex;
   top: 0;
-  background: linear-gradient(58deg, #555 15rem, #050505 15.1rem, #050505 15.5rem, #F60 15.6rem, #F40 100%);
-  box-shadow: 0 0 0.5rem #000; }
+  background: #555 linear-gradient(58deg, #555 8rem, #050505 8.1rem, #050505 8.5rem, #F60 8.6rem, #F40 100%) no-repeat;
+  background-position: 8.25rem 0;
+  box-shadow: 0 0 0.5rem #000;
+  transition: all 0.2s; }
   header .headercontainer {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden; }
     header .headercontainer #logo {
+      transition: all 0.2s;
       height: 100%;
       left: 8rem; }
     header .headercontainer .headerdetail {
@@ -91,6 +108,7 @@ header {
     top: 100%;
     width: 100%; }
     header .headerskirt .button {
+      transition: margin 0.2s;
       cursor: pointer;
       height: 2rem;
       top: -2rem;
@@ -163,32 +181,36 @@ header {
         justify-content: center;
         align-items: center;
         background: #111;
-        border-top: 2px solid #0046C8;
+        border-top: 4px solid #0046C8;
         font-size: 1.5rem;
         color: #377DFF; }
 
-main {
+.maincontainer {
   margin-top: 6rem;
-  margin-bottom: 4rem;
-  padding: 4rem;
-  padding-top: 1rem;
-  margin-left: 6rem;
-  margin-right: 6rem;
-  box-shadow: 0 0 0.5rem #244279;
-  border: 1px solid #244279;
-  border-top: 0 solid #244279;
-  background: url("../res/bg1.png") #222 top left/1024px 1024px no-repeat; }
-  main .hugetext {
-    font-size: 1.5rem;
-    text-align: center; }
-  main .panelcontainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; }
-    main .panelcontainer .sectionpanel {
+  height: calc(100% - 6rem);
+  overflow-y: scroll; }
+  .maincontainer main {
+    margin-bottom: 4rem;
+    padding: 4rem;
+    padding-top: 1rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    box-shadow: 0 0 0.5rem #244279;
+    border: 1px solid #244279;
+    border-top: 0 solid #244279;
+    background: url("../res/bg1.png") #222 top left/1024px 1024px no-repeat;
+    transition: all 0.2s; }
+    .maincontainer main .hugetext {
+      font-size: 1.5rem;
+      text-align: center; }
+    .maincontainer main .panelcontainer {
       display: flex;
-      flex-direction: column;
-      width: 50%; }
+      flex-wrap: wrap;
+      justify-content: center; }
+      .maincontainer main .panelcontainer .sectionpanel {
+        display: flex;
+        flex-direction: column;
+        width: 50%; }
 
 section {
   font-size: 1.25rem;
@@ -200,38 +222,41 @@ section {
     border: 0 solid transparent;
     border-bottom: 2px solid #F80; }
 
-@media (max-width: 60rem), (max-aspect-ratio: 1 / 1) {
-  header .headercontainer {
-    background: linear-gradient(58deg, #555 8rem, #050505 8.1rem, #050505 8.5rem, #F80 8.6rem, #840 100%); }
+@media (max-width: 1180px) {
+  header {
+    background-position: 0 0; }
     header .headercontainer #logo {
       left: 0; }
-  header .headerskirt .button {
-    height: 4rem;
-    top: -3.9rem;
-    font-size: 2rem;
-    border-top: 1px solid #0046C8;
-    margin: 0 0.15rem; }
+    header .headerskirt .button {
+      margin: 0 0.15rem; }
+  .maincontainer main {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    padding: 2rem; } }
+
+@media (max-width: 920px) {
+  header {
+    background-position: 0 0; }
+    header .headercontainer #logo {
+      left: 0; }
+    header .headerskirt {
+      justify-content: center; }
+      header .headerskirt .button {
+        top: 0;
+        border-top: 0 solid #0046C8;
+        border-bottom: 4px solid #0046C8; }
   .messageboxcontainer .messagebox {
     width: 90%; }
     .messageboxcontainer .messagebox #_MESSAGE {
-      padding: 2rem 1rem 4rem 1rem;
-      font-size: 2rem; }
-    .messageboxcontainer .messagebox .messageskirt .button {
-      height: 4rem;
-      top: -4rem;
-      font-size: 2rem;
-      border-top: 1px solid #0046C8;
-      margin: 0 0.15rem; }
-  main {
-    margin-bottom: 2rem;
+      padding: 2rem 1rem 4rem 1rem; }
+  .maincontainer main {
+    margin-bottom: 0;
     padding: 1rem;
-    margin-left: 2rem;
-    margin-right: 2rem; }
-    main .panelcontainer .sectionpanel {
+    margin-left: 0;
+    margin-right: 0; }
+    .maincontainer main .panelcontainer .sectionpanel {
       width: 100%; }
-  section {
-    font-size: 2.5rem;
-    line-height: 4rem; }
-    section h3 {
-      text-align: center;
-      width: 100%; } }
+  section h3 {
+    text-align: center;
+    width: 100%; } }

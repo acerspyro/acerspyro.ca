@@ -1,9 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis|Ubuntu');
+@import 'scrollbar';
 
 body {
+	position: relative;
 	margin: 0;
-	min-width: 30rem;
-	min-height: 16rem;
+	min-width: 660px;
+	height: 100vh;
+	overflow-y: hidden;
 	background: #111;
 	color: #AAA;
 	text-shadow: 0 2px 2px #000;
@@ -19,6 +22,10 @@ body {
 * {
 	box-sizing: border-box;
 	position: relative;
+
+	::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 .centered {
@@ -79,17 +86,21 @@ header {
 	z-index: 1001;
 	height: 6rem;
 	width: 100%;
+	min-width: 660px;
 	position: fixed;
 	display: flex;
 	top: 0;
-	background: linear-gradient(58deg,  #555 15rem, #050505 15.1rem, #050505 15.5rem, #F60 15.6rem, #F40 100%);
+	background: #555 linear-gradient(58deg,  #555 8rem, #050505 8.1rem, #050505 8.5rem, #F60 8.6rem, #F40 100%) no-repeat;
+	background-position: 8.25rem 0;
 	box-shadow: 0 0 0.5rem #000;
+	transition: all 0.2s;
 	.headercontainer {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
 		#logo {
+			transition: all 0.2s;
 			height: 100%;
 			left: 8rem;
 		}
@@ -112,6 +123,7 @@ header {
 		top: 100%;
 		width: 100%;
 		.button {
+			transition: margin 0.2s;
 			cursor: pointer;
 			height: 2rem;
 			top: -2rem;
@@ -188,7 +200,7 @@ header {
 				justify-content: center;
 				align-items: center;
 				background: #111;
-				border-top: 2px solid #0046C8;
+				border-top: 4px solid #0046C8;
 				font-size: 1.5rem;
 				color: #377DFF;
 			}
@@ -196,29 +208,34 @@ header {
 	}
 }
 
-main {
+.maincontainer {
 	margin-top: 6rem;
-	margin-bottom: 4rem;
-	padding: 4rem;
-	padding-top: 1rem;
-	margin-left: 6rem;
-	margin-right: 6rem;
-	box-shadow: 0 0 0.5rem #244279;
-	border: 1px solid #244279;
-	border-top: 0 solid #244279;
-	background: url('../res/bg1.png') #222 top left/1024px 1024px no-repeat;
-	.hugetext {
-		font-size: 1.5rem;
-		text-align: center;
-	}
-	.panelcontainer {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		.sectionpanel {
+	height: calc(100% - 6rem);
+	overflow-y: scroll;
+	main {
+		margin-bottom: 4rem;
+		padding: 4rem;
+		padding-top: 1rem;
+		margin-left: 6rem;
+		margin-right: 6rem;
+		box-shadow: 0 0 0.5rem #244279;
+		border: 1px solid #244279;
+		border-top: 0 solid #244279;
+		background: url('../res/bg1.png') #222 top left/1024px 1024px no-repeat;
+		transition: all 0.2s;
+		.hugetext {
+			font-size: 1.5rem;
+			text-align: center;
+		}
+		.panelcontainer {
 			display: flex;
-			flex-direction: column;
-			width: 50%;
+			flex-wrap: wrap;
+			justify-content: center;
+			.sectionpanel {
+				display: flex;
+				flex-direction: column;
+				width: 50%;
+			}
 		}
 	}
 }
@@ -235,21 +252,53 @@ section {
 	}
 }
 
-@media (max-width: 60rem), (max-aspect-ratio: 1/1) {
+@media (max-width: 1180px) {
 	header {
+		background-position: 0 0;
 		.headercontainer {
-			background: linear-gradient(58deg,  #555 8rem, #050505 8.1rem, #050505 8.5rem, #F80 8.6rem, #840 100%);
 			#logo {
 				left: 0;
 			}
 		}
 		.headerskirt {
 			.button {
-				height: 4rem;
-				top: -3.9rem;
-				font-size: 2rem;
-				border-top: 1px solid #0046C8;
 				margin: 0 0.15rem;
+			}
+		}
+	}
+	.maincontainer {
+		main {
+			margin-left: 2rem;
+			margin-right: 2rem;
+			margin-bottom: 2rem;
+			padding: 2rem;
+		}
+	}
+}
+
+@media (max-width: 920px) {
+	header {
+		background-position: 0 0;
+		.headercontainer {
+			#logo {
+				left: 0;
+			}
+		}
+		// .headerskirt {
+		// 	.button {
+		// 		height: 4rem;
+		// 		top: -3.9rem;
+		// 		font-size: 2rem;
+		// 		border-top: 1px solid #0046C8;
+		// 		margin: 0 0.15rem;
+		// 	}
+		// }
+		.headerskirt {
+			justify-content: center;
+			.button {
+				top: 0;
+				border-top: 0 solid #0046C8;
+				border-bottom: 4px solid #0046C8;
 			}
 		}
 	}
@@ -258,33 +307,35 @@ section {
 			width: 90%;
 			#_MESSAGE {
 				padding: 2rem 1rem 4rem 1rem;
-				font-size: 2rem;
+				//font-size: 2rem;
 			}
-			.messageskirt {
-				.button {
-					height: 4rem;
-					top: -4rem;
-					font-size: 2rem;
-					border-top: 1px solid #0046C8;
-					margin: 0 0.15rem;
+			// .messageskirt {
+			// 	.button {
+			// 		height: 4rem;
+			// 		top: -4rem;
+			// 		font-size: 2rem;
+			// 		border-top: 1px solid #0046C8;
+			// 		margin: 0 0.15rem;
+			// 	}
+			// }
+		}
+	}
+	.maincontainer {
+		main {
+			margin-bottom: 0;
+			padding: 1rem;
+			margin-left: 0;
+			margin-right: 0;
+			.panelcontainer {
+				.sectionpanel {
+					width: 100%;
 				}
 			}
 		}
 	}
-	main {
-		margin-bottom: 2rem;
-		padding: 1rem;
-		margin-left: 2rem;
-		margin-right: 2rem;
-		.panelcontainer {
-			.sectionpanel {
-				width: 100%;
-			}
-		}
-	}
 	section {
-		font-size: 2.5rem;
-		line-height: 4rem;
+		//font-size: 2.5rem;
+		//line-height: 4rem;
 		h3 {
 			text-align: center;
 			width: 100%;
