@@ -10,8 +10,24 @@ function changeLang() {
 	location.reload();
 }
 
-function addVerticalScrollbars() {
-	
+function customScrollbars() { // Does not auto load for some reason. Gotta look into that.
+	for (i = 0; i < document.getElementsByClassName("_SCROLLBAR").length; i++) {
+		var container = document.getElementsByClassName("_SCROLLBAR")[i];
+
+		if (document.getElementsByClassName("_SCROLLBAR")[i].getElementsByClassName("_customScrollbar")[0] == undefined) {
+			var scrollbar = document.createElement("div");
+			scrollbar.className = "_customScrollbar";
+			var scrollbarhandle = document.createElement("div");
+			scrollbar.appendChild(scrollbarhandle);
+			container.appendChild(scrollbar);
+			document.getElementsByClassName("_SCROLLBAR")[i].onscroll = customScrollbars;
+		}
+
+		var scrollbarhandle = container.getElementsByClassName("_customScrollbar")[0].getElementsByTagName("div")[0];
+		container.getElementsByClassName("_customScrollbar")[0].setAttribute("style","height:"+container.offsetHeight+"px;");
+
+		scrollbarhandle.setAttribute("style","height:"+((container.offsetHeight / container.scrollHeight)*100)+"%;top:"+((container.scrollTop / container.scrollHeight)*100)+"%;");
+	}
 }
 
 function fullFinalDate() { // My non-Y2.1K-compliant code.
@@ -79,6 +95,7 @@ function init() {
 		fileref.setAttribute("src", "js/lang/fr.js");
 	document.getElementsByTagName("head")[0].appendChild(fileref);
 	fullFinalDate();
+	customScrollbars();
 }
 
 document.onload = init();

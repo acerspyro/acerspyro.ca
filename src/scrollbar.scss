@@ -1,10 +1,12 @@
-.fscrollbar {
-  float: right;
+._customScrollbar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
   height: 100%;
   width: 8px;
   padding: 2px;
-  .scrolltab {
+  div {
     border-radius: 2px;
-    background: #FFF;
+    background: #555;
   }
 }

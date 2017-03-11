@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis|Ubuntu");
-.fscrollbar {
-  float: right;
+._customScrollbar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
   height: 100%;
   width: 8px;
   padding: 2px; }
-  .fscrollbar .scrolltab {
+  ._customScrollbar div {
     border-radius: 2px;
-    background: #FFF; }
+    background: #555; }
 
 body {
   position: relative;
