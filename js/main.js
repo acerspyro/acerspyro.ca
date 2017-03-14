@@ -1,5 +1,5 @@
 var lang;
-var latestChangeDate = "9/3/17"; // (D)D/(M)M/YY
+var latestChangeDate = "14/03/17"; // DD/MM/YY
 var finalDate;
 
 function changeLang() {
@@ -10,7 +10,29 @@ function changeLang() {
 	location.reload();
 }
 
-function customScrollbars() { // Does not auto load for some reason. Gotta look into that.
+function customScrollbars() {
+
+	// ---- VARIABLES
+
+	var lastdrag_y = 0;
+
+	// ---- FUNCTIONS
+
+	/*this.handleDragStart = function(event) {
+		event.dataTransfer.setData('text/plain',null);
+		lastdrag_y = event.screenY;
+		console.log('hello');
+	}
+
+	this.handleDrag = function(event) {
+		var what = event.target.parentElement.parentElement;
+		what.scrollTop = what.scrollTop + (event.screenY - lastdrag_y) * (what.scrollHeight / what.offsetHeight);
+		customScrollbars();
+		lastdrag_y = event.screenY;
+	}*/
+
+	// ---- CONSTRUCTOR
+
 	for (i = 0; i < document.getElementsByClassName("_SCROLLBAR").length; i++) {
 		var container = document.getElementsByClassName("_SCROLLBAR")[i];
 
@@ -20,7 +42,13 @@ function customScrollbars() { // Does not auto load for some reason. Gotta look 
 			var scrollbarhandle = document.createElement("div");
 			scrollbar.appendChild(scrollbarhandle);
 			container.appendChild(scrollbar);
-			document.getElementsByClassName("_SCROLLBAR")[i].onscroll = customScrollbars;
+			container.onscroll = customScrollbars;
+			scrollbarhandle = container.getElementsByClassName("_customScrollbar")[0].getElementsByTagName("div")[0];
+			/*scrollbarhandle.setAttribute("draggable", "true");
+
+
+			scrollbarhandle.addEventListener("drag", handleDrag, false);
+			scrollbarhandle.addEventListener("dragstart", handleDragStart, false);*/
 		}
 
 		var scrollbarhandle = container.getElementsByClassName("_customScrollbar")[0].getElementsByTagName("div")[0];
@@ -30,15 +58,17 @@ function customScrollbars() { // Does not auto load for some reason. Gotta look 
 	}
 }
 
-function fullFinalDate() { // My non-Y2.1K-compliant code.
+function translateDate(dateString) { // My non-Y2.1K-compliant code. DD/MM/YY
+	var value;
 	if (lang == 'en') {
 		var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 		var daySuffix = ['st','nd','rd'];
-		finalDate = months[latestChangeDate.split('/')[1]-1]+' '+latestChangeDate.split('/')[0]+((latestChangeDate.split('/')[0] < 4) ? daySuffix[latestChangeDate.split('/')[0]-1] : '')+', 20'+latestChangeDate.split('/')[2];
+		value = months[dateString.split('/')[1]-1]+' '+dateString.split('/')[0]+((dateString.split('/')[0] < 4) ? daySuffix[dateString.split('/')[0]-1] : '')+', 20'+dateString.split('/')[2];
 	} else if (lang == 'fr') {
 		var months = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
-		finalDate = latestChangeDate.split('/')[0]+((latestChangeDate.split('/')[0] == 1) ? 'er' : '')+' '+months[latestChangeDate.split('/')[1]-1]+' 20'+latestChangeDate.split('/')[2];
+		value = dateString.split('/')[0]+((dateString.split('/')[0] == 1) ? 'er' : '')+' '+months[dateString.split('/')[1]-1]+' 20'+dateString.split('/')[2];
 	}
+	return value;
 }
 
 function openContactDialog() {
@@ -94,8 +124,9 @@ function init() {
 	else
 		fileref.setAttribute("src", "js/lang/fr.js");
 	document.getElementsByTagName("head")[0].appendChild(fileref);
-	fullFinalDate();
-	customScrollbars();
+	finalDate = translateDate(latestChangeDate);
+	setTimeout(customScrollbars, 100);
+	window.addEventListener('resize', customScrollbars);
 }
 
 document.onload = init();

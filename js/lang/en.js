@@ -8,7 +8,7 @@ var _ABOUT_MSG = "\
 	Last revision made on "+finalDate+".<br/>Design by Maxim \"Acerspyro\" Therrien (if it wasn't obvious).\
 </p>\
 <p>\
-	<a href='https://github.com/acerspyro/acerspyro.github.io/'>https://github.com/acerspyro/acerspyro.github.io/</a>\
+	<a href='https://github.com/acerspyro/acerspyro.ca/'>https://github.com/acerspyro/acerspyro.ca/</a>\
 </p>";
 
 var	_CONTACT_MSG = "\
