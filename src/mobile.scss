@@ -31,16 +31,18 @@ header {
   }
 }
 .messageboxcontainer {
+  top: 64px;
   .messagebox {
     width: 90%;
     #_MESSAGE {
-      padding: 8px 4px 64px 4px;
+      padding: 16px 4px 24px 4px;
+      font-size: 12px;
     }
     .messageskirt {
     	.button {
-    		height: 64px;
-    		top: -64px;
-    		font-size: 32px;
+    		height: 24px;
+    		top: -24px;
+    		font-size: 16px;
     		border-top: 1px solid #0046C8;
     		margin: 0 2px;
     	}
