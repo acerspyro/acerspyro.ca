@@ -10,7 +10,7 @@
 	<meta name="theme-color" content="#F60" />
 	<link rel="shortcut icon" type="image/png" href="res/favicon.png"/>
 	<title>Acerspyro</title>
-	<script src='js/main.js'></script>
+	<script async src='js/main.js'></script>
 	<link rel='stylesheet' type='text/css' href='css/main.css'/>
 	<?php
 		if ($mobile) {
@@ -28,10 +28,8 @@
 		echo "<body>";
  ?>
 	<header>
-		<div class='headercontainer'>
-			<img id='logo' src='res/topicon.svg'/>
-		</div>
-		<div class='headerskirt'>
+		<img id='logo' src='res/topicon.svg'/>
+		<div class='buttonContainer'>
 			<div id='_CODEPEN_BUTTON' class='button' onclick="window.open('http://codepen.io/acerspyro/', '_blank');"></div>
 			<div id='_GITHUB_BUTTON' class='button' onclick="window.open('https://github.com/acerspyro/', '_blank');"></div>
 			<div id='_CONTACT_BUTTON' class='button' onclick="openContactDialog()"></div>
@@ -39,27 +37,27 @@
 			<div id='_LANG_BUTTON' class='button' onclick="changeLang()"></div>
 		</div>
 	</header>
-	<div class='messageboxcontainer'>
-		<div class='messagebox'>
+	<div id='popupContainer'>
+		<div id='popup'>
 			<div id='_MESSAGE'>
 			</div>
-			<div class='messageskirt'>
+			<div class='buttonContainer'>
 				<div id='_CLOSE_BUTTON' class='button' onclick="closeDialog()"></div>
 			</div>
 		</div>
 	</div>
-	<div class='maincontainer _SCROLLBAR'>
+	<div id='mainContainer'>
 		<main>
-			<span id='_TOP_TEXT' class='hugetext'>
+			<span id='_TOP_TEXT'>
 			</span>
-			<div class='panelcontainer'>
-				<div class='sectionpanel'>
+			<div id='content'>
+				<div class='panel'>
 					<section id='_SECTION_BACKSTORY'>
 					</section>
 					<section id='_SECTION_SKILLS'>
 					</section>
 				</div>
-				<div class='sectionpanel'>
+				<div class='panel'>
 					<section id='_SECTION_INTRO'>
 					</section>
 					<section id='_SECTION_PROJECTS'>

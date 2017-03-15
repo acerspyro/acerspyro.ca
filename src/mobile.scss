@@ -5,14 +5,12 @@ body {
 }
 
 header {
-  z-index: 1000;
   position: relative;
   min-width: 0;
   height: 48px;
   background: #555 linear-gradient(58deg,  #555 64px, #050505 65px, #050505 68px, #F60 69px, #F60 100%) no-repeat;
 	background-position: 0 0;
-  .headerskirt {
-    position: relative;
+  .buttonContainer {
     height: 32px;
     background: #555;
     justify-content: space-around;
@@ -30,15 +28,15 @@ header {
   	}
   }
 }
-.messageboxcontainer {
+#popupContainer {
   top: 64px;
-  .messagebox {
+  #popup {
     width: 90%;
     #_MESSAGE {
       padding: 16px 4px 24px 4px;
       font-size: 12px;
     }
-    .messageskirt {
+    .buttonContainer {
     	.button {
     		height: 24px;
     		top: -24px;
@@ -49,22 +47,18 @@ header {
     }
   }
 }
-.maincontainer {
-  z-index: 0;
+#mainContainer {
   margin-top: 0;
-  overflow-y: auto;
   main {
     border: none;
-    margin-bottom: 0;
+    margin: 0;
     padding: 8px;
     padding-top: 64px;
-    margin-left: 0;
-    margin-right: 0;
-    .hugetext {
+    #_TOP_TEXT {
       font-size: 12px;
     }
-    .panelcontainer {
-      .sectionpanel {
+    #content {
+      .panel {
         width: 100%;
       }
     }
@@ -76,8 +70,6 @@ section {
   line-height: 32px;
   text-align: center;
   h3 {
-    text-align: center;
-    width: 100%;
     font-size: 24px;
   }
 }

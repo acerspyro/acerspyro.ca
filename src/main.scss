@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis|Ubuntu');
-@import 'scrollbar';
+//@import 'scrollbar';
 
 body {
 	position: relative;
@@ -12,7 +12,6 @@ body {
 	text-shadow: 0 2px 2px #000;
 	font-family: Ubuntu;
 	font-size: 16px;
-	//-webkit-text-size-adjust:none;
 }
 
 @mixin noselect {
@@ -94,29 +93,14 @@ header {
 	background-position: 132px 0;
 	box-shadow: 0 0 8px #000;
 	transition: all 0.2s;
-	.headercontainer {
+	#logo {
 		position: absolute;
-		width: 100%;
 		height: 100%;
-		overflow: hidden;
-		#logo {
-			transition: all 0.2s;
-			height: 100%;
-			left: 128px;
-		}
-		.headerdetail {
-			position: absolute;
-			left: 384px;
-			top: 0;
-			width: calc(100% - 192px);
-      width: -webkit-calc(100% - 192px);
-			transform: skew(32deg);
-			height: 100%;
-			backface-visibility: hidden;
-			background: transparent;
-		}
+		transition: all 0.2s;
+		height: 100%;
+		left: 128px;
 	}
-	.headerskirt {
+	.buttonContainer {
 		position: absolute;
 		display: flex;
 		justify-content: flex-end;
@@ -142,7 +126,7 @@ header {
 	}
 }
 
-.messageboxcontainer {
+#popupContainer {
 	z-index: 999;
 	position: fixed;
 	display: flex;
@@ -153,7 +137,7 @@ header {
 	perspective-origin: center top;
 	perspective: 700px;
 	transform-style: preserve-3d;
-	.messagebox {
+	#popup {
 		pointer-events: auto;
 		width: 50%;
 		box-shadow: 0 0 8px #000;
@@ -183,7 +167,7 @@ header {
 			word-wrap: break-word;
 			overflow: auto;
 		}
-		.messageskirt {
+		.buttonContainer {
 			position: absolute;
 			display: flex;
 			justify-content: center;
@@ -209,7 +193,7 @@ header {
 	}
 }
 
-.maincontainer {
+#mainContainer {
 	margin-top: 96px;
 	height: calc(100% - 96px);
 	overflow-x: hidden;
@@ -225,15 +209,15 @@ header {
 		border-top: 0 solid #244279;
 		background: linear-gradient(135deg, transparent 0%, #222 768px, #222 100%), url('../res/bg1.svg') #222 top left/1024px 1024px no-repeat;
 		transition: all 0.2s;
-		.hugetext {
+		#_TOP_TEXT {
 			font-size: 24px;
 			text-align: center;
 		}
-		.panelcontainer {
+		#content {
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
-			.sectionpanel {
+			.panel {
 				display: flex;
 				flex-direction: column;
 				width: 50%;
@@ -257,18 +241,16 @@ section {
 @media (max-width: 1180px) {
 	header {
 		background-position: 0 0;
-		.headercontainer {
-			#logo {
-				left: 0;
-			}
+		#logo {
+			left: 0;
 		}
-		.headerskirt {
+		.buttonContainer {
 			.button {
 				margin: 0 2px;
 			}
 		}
 	}
-	.maincontainer {
+	#mainContainer {
 		main {
 			margin-left: 32px;
 			margin-right: 32px;
@@ -281,12 +263,10 @@ section {
 @media (max-width: 920px) {
 	header {
 		background-position: 0 0;
-		.headercontainer {
-			#logo {
-				left: 0;
-			}
+		#logo {
+			left: 0;
 		}
-		.headerskirt {
+		.buttonContainer {
 			justify-content: center;
 			.button {
 				top: 0;
@@ -295,22 +275,22 @@ section {
 			}
 		}
 	}
-	.messageboxcontainer {
-		.messagebox {
+	#popupContainer {
+		#popup {
 			width: 90%;
 			#_MESSAGE {
 				padding: 32px 16px 64px 16px;
 			}
 		}
 	}
-	.maincontainer {
+	#mainContainer {
 		main {
 			margin-bottom: 0;
 			padding: 16px;
 			margin-left: 0;
 			margin-right: 0;
-			.panelcontainer {
-				.sectionpanel {
+			#content {
+				.panel {
 					width: 100%;
 				}
 			}

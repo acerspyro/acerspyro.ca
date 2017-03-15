@@ -10,7 +10,7 @@ function changeLang() {
 	location.reload();
 }
 
-function customScrollbars() {
+/*function customScrollbars() {
 
 	/*var lastdrag_y = 0;
 
@@ -25,7 +25,7 @@ function customScrollbars() {
 		what.scrollTop = what.scrollTop + (event.screenY - lastdrag_y) * (what.scrollHeight / what.offsetHeight);
 		customScrollbars();
 		lastdrag_y = event.screenY;
-	}*/
+	}
 
 	for (i = 0; i < document.getElementsByClassName("_SCROLLBAR").length; i++) {
 		var container = document.getElementsByClassName("_SCROLLBAR")[i];
@@ -42,7 +42,7 @@ function customScrollbars() {
 
 
 			scrollbarhandle.addEventListener("drag", handleDrag, false);
-			scrollbarhandle.addEventListener("dragstart", handleDragStart, false);*/
+			scrollbarhandle.addEventListener("dragstart", handleDragStart, false);
 		}
 
 		var scrollbarhandle = container.getElementsByClassName("_customScrollbar")[0].getElementsByTagName("div")[0];
@@ -50,7 +50,7 @@ function customScrollbars() {
 
 		scrollbarhandle.setAttribute("style","height:"+((container.offsetHeight / container.scrollHeight)*100)+"%;top:"+((container.scrollTop / container.scrollHeight)*100)+"%;");
 	}
-}
+}*/
 
 function translateDate(dateString) { // My non-Y2.1K-compliant code. DD/MM/YY
 	var value;
@@ -66,37 +66,37 @@ function translateDate(dateString) { // My non-Y2.1K-compliant code. DD/MM/YY
 }
 
 function openContactDialog() {
-	if (document.getElementsByClassName("messagebox")[0].className.search('contact') == -1) {
-		if (document.getElementsByClassName("messagebox")[0].className.search('open') == -1) {
+	if (document.getElementById("popup").className.search('contact') == -1) {
+		if (document.getElementById("popup").className.search('open') == -1) {
 			document.getElementById("_MESSAGE").innerHTML = _CONTACT_MSG;
-			document.getElementsByClassName("messagebox")[0].className = "messagebox open contact";
+			document.getElementById("popup").className = "popup open contact";
 		} else {
-			document.getElementsByClassName("messagebox")[0].className = "messagebox";
+			document.getElementById("popup").className = "popup";
 			setTimeout(function(){
 				document.getElementById("_MESSAGE").innerHTML = _CONTACT_MSG;
-				document.getElementsByClassName("messagebox")[0].className = "messagebox open contact";
+				document.getElementById("popup").className = "popup open contact";
 			}, 250);
 		}
 	}
 }
 
 function openAboutDialog() {
-	if (document.getElementsByClassName("messagebox")[0].className.search('about') == -1) {
-		if (document.getElementsByClassName("messagebox")[0].className.search('open') == -1) {
+	if (document.getElementById("popup").className.search('about') == -1) {
+		if (document.getElementById("popup").className.search('open') == -1) {
 			document.getElementById("_MESSAGE").innerHTML = _ABOUT_MSG;
-			document.getElementsByClassName("messagebox")[0].className = "messagebox open about";
+			document.getElementById("popup").className = "popup open about";
 		} else {
-			document.getElementsByClassName("messagebox")[0].className = "messagebox";
+			document.getElementById("popup").className = "popup";
 			setTimeout(function(){
 				document.getElementById("_MESSAGE").innerHTML = _ABOUT_MSG;
-				document.getElementsByClassName("messagebox")[0].className = "messagebox open about";
+				document.getElementById("popup").className = "popup open about";
 			}, 250);
 		}
 	}
 }
 
 function closeDialog() {
-	document.getElementsByClassName("messagebox")[0].className = "messagebox";
+	document.getElementById("popup").className = "popup";
 }
 
 function init() {
@@ -127,12 +127,12 @@ function init() {
 
 }
 
-function postload() {
+/*function postload() {
 	if (!document.getElementsByTagName("body")[0].hasAttribute("mobile")) {
 		customScrollbars();
 		window.addEventListener('resize', customScrollbars);
 	}
-}
+}*/
 
 document.onload = init();
-window.addEventListener('load', postload);
+//window.addEventListener('load', postload);
