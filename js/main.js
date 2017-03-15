@@ -1,5 +1,5 @@
 var lang;
-var latestChangeDate = "14/03/17"; // DD/MM/YY
+var latestChangeDate = "15/03/17"; // DD/MM/YY
 var finalDate;
 
 function changeLang() {
@@ -12,13 +12,9 @@ function changeLang() {
 
 function customScrollbars() {
 
-	// ---- VARIABLES
+	/*var lastdrag_y = 0;
 
-	var lastdrag_y = 0;
-
-	// ---- FUNCTIONS
-
-	/*this.handleDragStart = function(event) {
+	this.handleDragStart = function(event) {
 		event.dataTransfer.setData('text/plain',null);
 		lastdrag_y = event.screenY;
 		console.log('hello');
@@ -31,8 +27,6 @@ function customScrollbars() {
 		lastdrag_y = event.screenY;
 	}*/
 
-	// ---- CONSTRUCTOR
-
 	for (i = 0; i < document.getElementsByClassName("_SCROLLBAR").length; i++) {
 		var container = document.getElementsByClassName("_SCROLLBAR")[i];
 
@@ -42,7 +36,7 @@ function customScrollbars() {
 			var scrollbarhandle = document.createElement("div");
 			scrollbar.appendChild(scrollbarhandle);
 			container.appendChild(scrollbar);
-			container.onscroll = customScrollbars;
+			container.addEventListener('scroll', customScrollbars);
 			scrollbarhandle = container.getElementsByClassName("_customScrollbar")[0].getElementsByTagName("div")[0];
 			/*scrollbarhandle.setAttribute("draggable", "true");
 
@@ -107,26 +101,38 @@ function closeDialog() {
 
 function init() {
 	var c=document.cookie.split(';');
+
 	for (i=0;i<c.length;i++) {
 		if (c[i].split('=')[0] == 'lang') {
 			lang=c[i].split('=')[1];
 			break;
 		}
 	}
+
 	if (lang == undefined) {
 		document.cookie='lang=en;expires=999999999999999999';
 		lang='en';
 	}
+
 	var fileref = document.createElement('script');
 	fileref.setAttribute("type","text/javascript");
+
 	if (lang == 'en')
 		fileref.setAttribute("src", "js/lang/en.js");
 	else
 		fileref.setAttribute("src", "js/lang/fr.js");
+
 	document.getElementsByTagName("head")[0].appendChild(fileref);
 	finalDate = translateDate(latestChangeDate);
-	setTimeout(customScrollbars, 100);
-	window.addEventListener('resize', customScrollbars);
+
+}
+
+function postload() {
+	if (!document.getElementsByTagName("body")[0].hasAttribute("mobile")) {
+		customScrollbars();
+		window.addEventListener('resize', customScrollbars);
+	}
 }
 
 document.onload = init();
+window.addEventListener('load', postload);

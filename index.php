@@ -1,13 +1,32 @@
+<?php
+	$mobile = false;
+	if (strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android'))
+		$mobile = true;
+ ?>
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
 	<meta content="text/html; charset=UTF-8" http-equiv="Content-type"/>
 	<meta name="theme-color" content="#F60" />
+	<link rel="shortcut icon" type="image/png" href="res/favicon.png"/>
 	<title>Acerspyro</title>
 	<script src='js/main.js'></script>
 	<link rel='stylesheet' type='text/css' href='css/main.css'/>
+	<?php
+		if ($mobile) {
+			echo "<meta name=\"HandheldFriendly\" content=\"true\" />";
+			echo "<meta name=\"MobileOptimized\" content=\"320\" />";
+			echo "<meta name=\"viewport\" content=\"initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no\" />";
+			echo "<link rel='stylesheet' type='text/css' href='css/mobile.css'/>";
+		}
+	 ?>
 </head>
-<body>
+<?php
+	if ($mobile)
+		echo "<body mobile>";
+	else
+		echo "<body>";
+ ?>
 	<header>
 		<div class='headercontainer'>
 			<img id='logo' src='res/topicon.svg'/>

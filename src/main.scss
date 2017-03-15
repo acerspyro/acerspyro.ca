@@ -11,7 +11,8 @@ body {
 	color: #AAA;
 	text-shadow: 0 2px 2px #000;
 	font-family: Ubuntu;
-	-webkit-text-size-adjust:none;
+	font-size: 16px;
+	//-webkit-text-size-adjust:none;
 }
 
 @mixin noselect {
@@ -74,7 +75,6 @@ h3 {
 
 h1, h2, h3, h4 {
 	color: #FFF;
-	//text-shadow: 0 0 0.1em #0046C8, 0 0 0.1em #0046C8;
 	font-family: Dosis;
 	letter-spacing: 0.1em;
 	font-weight: normal;
@@ -84,15 +84,15 @@ header {
 	@include noselect;
 	font-family: Dosis;
 	z-index: 1001;
-	height: 6rem;
+	height: 96px;
 	width: 100%;
 	min-width: 660px;
 	position: fixed;
 	display: flex;
 	top: 0;
-	background: #555 linear-gradient(58deg,  #555 8rem, #050505 8.1rem, #050505 8.5rem, #F60 8.6rem, #F40 100%) no-repeat;
-	background-position: 8.25rem 0;
-	box-shadow: 0 0 0.5rem #000;
+	background: #555 linear-gradient(58deg,  #555 128px, #050505 129px, #050505 136px, #F60 137px, #F40 100%) no-repeat;
+	background-position: 132px 0;
+	box-shadow: 0 0 8px #000;
 	transition: all 0.2s;
 	.headercontainer {
 		position: absolute;
@@ -102,14 +102,14 @@ header {
 		#logo {
 			transition: all 0.2s;
 			height: 100%;
-			left: 8rem;
+			left: 128px;
 		}
 		.headerdetail {
 			position: absolute;
-			left: 24rem;
+			left: 384px;
 			top: 0;
-			width: calc(100% - 12rem);
-      width: -webkit-calc(100% - 12rem);
+			width: calc(100% - 192px);
+      width: -webkit-calc(100% - 192px);
 			transform: skew(32deg);
 			height: 100%;
 			backface-visibility: hidden;
@@ -126,17 +126,17 @@ header {
 		.button {
 			transition: margin 0.2s;
 			cursor: pointer;
-			height: 2rem;
-			top: -2rem;
-			width: 8rem;
+			height: 32px;
+			top: -32px;
+			width: 128px;
 			display: flex;
-			margin: 0 1rem;
+			margin: 0 16px;
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			background: #111;
 			border-top: 4px solid #0046C8;
-			font-size: 1.5rem;
+			font-size: 24px;
 			color: #377DFF;
 		}
 	}
@@ -147,7 +147,7 @@ header {
 	position: fixed;
 	display: flex;
 	justify-content: center;
-	top: 6rem;
+	top: 96px;
 	width: 100%;
 	pointer-events: none;
 	perspective-origin: center top;
@@ -156,7 +156,7 @@ header {
 	.messagebox {
 		pointer-events: auto;
 		width: 50%;
-		box-shadow: 0 0 0.5rem #000;
+		box-shadow: 0 0 8px #000;
 		border: 1px solid #244279;
 		border-top: 0 solid #244279;
 		background: url('../res/bg1.png') #222 top left/768px 768px no-repeat;
@@ -178,7 +178,7 @@ header {
 			align-items: center;
 			width: 100%;
 			max-height: 100%;
-			padding: 2rem 4rem;
+			padding: 32px 64px;
 			text-align: center;
 			word-wrap: break-word;
 			overflow: auto;
@@ -193,16 +193,16 @@ header {
 				@include noselect;
 				font-family: Dosis;
 				cursor: pointer;
-				height: 2rem;
-				width: 8rem;
-				top: -2rem;
+				height: 32px;
+				width: 128px;
+				top: -32px;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 				background: #111;
 				border-top: 4px solid #0046C8;
-				font-size: 1.5rem;
+				font-size: 24px;
 				color: #377DFF;
 			}
 		}
@@ -210,22 +210,23 @@ header {
 }
 
 .maincontainer {
-	margin-top: 6rem;
-	height: calc(100% - 6rem);
+	margin-top: 96px;
+	height: calc(100% - 96px);
+	overflow-x: hidden;
 	overflow-y: scroll;
 	main {
-		margin-bottom: 4rem;
-		padding: 4rem;
-		padding-top: 1rem;
-		margin-left: 6rem;
-		margin-right: 6rem;
-		box-shadow: 0 0 0.5rem #244279;
+		margin-bottom: 64px;
+		padding: 64px;
+		padding-top: 16px;
+		margin-left: 96px;
+		margin-right: 96px;
+		box-shadow: 0 0 8px #244279;
 		border: 1px solid #244279;
 		border-top: 0 solid #244279;
 		background: url('../res/bg1.png') #222 top left/1024px 1024px no-repeat;
 		transition: all 0.2s;
 		.hugetext {
-			font-size: 1.5rem;
+			font-size: 24px;
 			text-align: center;
 		}
 		.panelcontainer {
@@ -242,8 +243,8 @@ header {
 }
 
 section {
-	font-size: 1.25rem;
-	line-height: 1.8rem;
+	font-size: 20px;
+	line-height: 32px;
 	padding: 1rem;
 	padding-top: 0;
 	h3 {
@@ -263,16 +264,16 @@ section {
 		}
 		.headerskirt {
 			.button {
-				margin: 0 0.15rem;
+				margin: 0 2px;
 			}
 		}
 	}
 	.maincontainer {
 		main {
-			margin-left: 2rem;
-			margin-right: 2rem;
-			margin-bottom: 2rem;
-			padding: 2rem;
+			margin-left: 32px;
+			margin-right: 32px;
+			margin-bottom: 32px;
+			padding: 32px;
 		}
 	}
 }
@@ -285,15 +286,6 @@ section {
 				left: 0;
 			}
 		}
-		// .headerskirt {
-		// 	.button {
-		// 		height: 4rem;
-		// 		top: -3.9rem;
-		// 		font-size: 2rem;
-		// 		border-top: 1px solid #0046C8;
-		// 		margin: 0 0.15rem;
-		// 	}
-		// }
 		.headerskirt {
 			justify-content: center;
 			.button {
@@ -307,24 +299,14 @@ section {
 		.messagebox {
 			width: 90%;
 			#_MESSAGE {
-				padding: 2rem 1rem 4rem 1rem;
-				//font-size: 2rem;
+				padding: 32px 16px 64px 16px;
 			}
-			// .messageskirt {
-			// 	.button {
-			// 		height: 4rem;
-			// 		top: -4rem;
-			// 		font-size: 2rem;
-			// 		border-top: 1px solid #0046C8;
-			// 		margin: 0 0.15rem;
-			// 	}
-			// }
 		}
 	}
 	.maincontainer {
 		main {
 			margin-bottom: 0;
-			padding: 1rem;
+			padding: 16px;
 			margin-left: 0;
 			margin-right: 0;
 			.panelcontainer {
@@ -335,8 +317,6 @@ section {
 		}
 	}
 	section {
-		//font-size: 2.5rem;
-		//line-height: 4rem;
 		h3 {
 			text-align: center;
 			width: 100%;
