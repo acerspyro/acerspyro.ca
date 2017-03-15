@@ -148,7 +148,7 @@ header {
     box-shadow: 0 0 8px #000;
     border: 1px solid #244279;
     border-top: 0 solid #244279;
-    background: url("../res/bg1.png") #222 top left/768px 768px no-repeat;
+    background: linear-gradient(135deg, transparent 0%, #222 576px, #222 100%), url("../res/bg1.svg") #222 top left/768px 768px no-repeat;
     margin: 0;
     transform-origin: center top;
     transform: rotateX(-90deg);
@@ -207,7 +207,7 @@ header {
     box-shadow: 0 0 8px #244279;
     border: 1px solid #244279;
     border-top: 0 solid #244279;
-    background: url("../res/bg1.png") #222 top left/1024px 1024px no-repeat;
+    background: linear-gradient(135deg, transparent 0%, #222 768px, #222 100%), url("../res/bg1.svg") #222 top left/1024px 1024px no-repeat;
     transition: all 0.2s; }
     .maincontainer main .hugetext {
       font-size: 24px;
