@@ -1,5 +1,5 @@
 var lang;
-var latestChangeDate = "15/03/17"; // DD/MM/YY
+var latestChangeDate = "16/03/17"; // DD/MM/YY
 var finalDate;
 
 function changeLang() {

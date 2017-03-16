@@ -267,17 +267,26 @@ section {
 @media (max-width: 920px) {
 	header {
 		background-position: 0 0;
+		height: 64px;
 		#logo {
-			left: 0;
+			left: 48px;
 		}
 		.buttonContainer {
-			justify-content: center;
-			.button {
-				top: 0;
-				border-top: 0 solid #0046C8;
-				border-bottom: 4px solid #0046C8;
-			}
-		}
+	    height: 32px;
+	    background: #555;
+	    justify-content: space-around;
+	    box-shadow: 0 0 8px #000;
+	  	.button {
+	  		height: 32px;
+	      width: 128px;
+	  		top: 16px;
+	      border: none;
+	      background: none;
+	      box-shadow: inset 0 -4px 0 #08F;
+	      color: #FFF;
+	  		margin: -16px 0;
+	  	}
+	  }
 	}
 	#popupContainer {
 		#popup {
@@ -289,10 +298,7 @@ section {
 	}
 	#mainContainer {
 		main {
-			margin-bottom: 0;
 			padding: 16px;
-			margin-left: 0;
-			margin-right: 0;
 			#content {
 				.panel {
 					width: 100%;
