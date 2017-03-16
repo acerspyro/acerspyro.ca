@@ -65,37 +65,22 @@ function translateDate(dateString) { // My non-Y2.1K-compliant code. DD/MM/YY
 	return value;
 }
 
-function openContactDialog() {
-	if (document.getElementById("popup").className.search('contact') == -1) {
+function openPopup(which) {
+	if (document.getElementById("popup").className.search(which) == -1) {
 		if (document.getElementById("popup").className.search('open') == -1) {
-			document.getElementById("_MESSAGE").innerHTML = _CONTACT_MSG;
-			document.getElementById("popup").className = "popup open contact";
+			document.getElementById("_MESSAGE").innerHTML = window["_"+which.toUpperCase()+"_MSG"];
+			document.getElementById("popup").className = `popup open ${which}`;
 		} else {
-			document.getElementById("popup").className = "popup";
+			closePopup();
 			setTimeout(function(){
-				document.getElementById("_MESSAGE").innerHTML = _CONTACT_MSG;
-				document.getElementById("popup").className = "popup open contact";
+				document.getElementById("_MESSAGE").innerHTML = window["_"+which.toUpperCase()+"_MSG"];
+				document.getElementById("popup").className = `popup open ${which}`;
 			}, 250);
 		}
 	}
 }
 
-function openAboutDialog() {
-	if (document.getElementById("popup").className.search('about') == -1) {
-		if (document.getElementById("popup").className.search('open') == -1) {
-			document.getElementById("_MESSAGE").innerHTML = _ABOUT_MSG;
-			document.getElementById("popup").className = "popup open about";
-		} else {
-			document.getElementById("popup").className = "popup";
-			setTimeout(function(){
-				document.getElementById("_MESSAGE").innerHTML = _ABOUT_MSG;
-				document.getElementById("popup").className = "popup open about";
-			}, 250);
-		}
-	}
-}
-
-function closeDialog() {
+function closePopup() {
 	document.getElementById("popup").className = "popup";
 }
 

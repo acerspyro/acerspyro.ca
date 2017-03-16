@@ -10,7 +10,7 @@
 	<meta name="theme-color" content="#F60" />
 	<link rel="shortcut icon" type="image/png" href="res/favicon.png"/>
 	<title>Acerspyro</title>
-	<script async src='js/main.js'></script>
+	<script src='js/main.js'></script>
 	<link rel='stylesheet' type='text/css' href='css/main.css'/>
 	<?php
 		if ($mobile) {
@@ -30,11 +30,11 @@
 	<header>
 		<img id='logo' src='res/topicon.svg'/>
 		<div class='buttonContainer'>
-			<div id='_CODEPEN_BUTTON' class='button' onclick="window.open('http://codepen.io/acerspyro/', '_blank');"></div>
-			<div id='_GITHUB_BUTTON' class='button' onclick="window.open('https://github.com/acerspyro/', '_blank');"></div>
-			<div id='_CONTACT_BUTTON' class='button' onclick="openContactDialog()"></div>
-			<div id='_ABOUT_BUTTON' class='button' onclick="openAboutDialog()"></div>
-			<div id='_LANG_BUTTON' class='button' onclick="changeLang()"></div>
+			<div id='_CODEPEN_BUTTON' class='button' onclick="window.open('http://codepen.io/acerspyro/', '_blank');">&bull;&nbsp;&bull;&nbsp;&bull;</div>
+			<div id='_GITHUB_BUTTON' class='button' onclick="window.open('https://github.com/acerspyro/', '_blank');">&bull;&nbsp;&bull;&nbsp;&bull;</div>
+			<div id='_CONTACT_BUTTON' class='button' onclick="openPopup('contact')">&bull;&nbsp;&bull;&nbsp;&bull;</div>
+			<div id='_ABOUT_BUTTON' class='button' onclick="openPopup('about')">&bull;&nbsp;&bull;&nbsp;&bull;</div>
+			<div id='_LANG_BUTTON' class='button' onclick="changeLang()">&bull;&nbsp;&bull;&nbsp;&bull;</div>
 		</div>
 	</header>
 	<div id='popupContainer'>
@@ -42,13 +42,14 @@
 			<div id='_MESSAGE'>
 			</div>
 			<div class='buttonContainer'>
-				<div id='_CLOSE_BUTTON' class='button' onclick="closeDialog()"></div>
+				<div id='_CLOSE_BUTTON' class='button' onclick="closePopup()"></div>
 			</div>
 		</div>
 	</div>
 	<div id='mainContainer'>
 		<main>
 			<span id='_TOP_TEXT'>
+				<div id='needJS'>This page is taking a while to load...<br/>Or are you too fancy for JavaScript?</div>
 			</span>
 			<div id='content'>
 				<div class='panel'>

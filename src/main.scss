@@ -28,6 +28,27 @@ body {
 	}
 }
 
+@keyframes needJS {
+	0% {
+		opacity: 0;
+	}
+	95% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+#needJS {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	animation-name: needJS;
+	animation-iteration-count: 1;
+	animation-duration: 20s;
+}
+
 .centered {
 	text-align: center;
 }
@@ -199,14 +220,8 @@ header {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	main {
-		margin-bottom: 64px;
-		padding: 64px;
+		padding: 128px;
 		padding-top: 16px;
-		margin-left: 96px;
-		margin-right: 96px;
-		box-shadow: 0 0 8px #244279;
-		border: 1px solid #244279;
-		border-top: 0 solid #244279;
 		background: linear-gradient(135deg, transparent 0%, #222 768px, #222 100%), url('../res/bg1.svg') #222 top left/1024px 1024px no-repeat;
 		transition: all 0.2s;
 		#_TOP_TEXT {
@@ -252,10 +267,7 @@ section {
 	}
 	#mainContainer {
 		main {
-			margin-left: 32px;
-			margin-right: 32px;
-			margin-bottom: 32px;
-			padding: 32px;
+			padding: 64px;
 		}
 	}
 }
