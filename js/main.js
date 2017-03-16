@@ -10,48 +10,6 @@ function changeLang() {
 	location.reload();
 }
 
-/*function customScrollbars() {
-
-	/*var lastdrag_y = 0;
-
-	this.handleDragStart = function(event) {
-		event.dataTransfer.setData('text/plain',null);
-		lastdrag_y = event.screenY;
-		console.log('hello');
-	}
-
-	this.handleDrag = function(event) {
-		var what = event.target.parentElement.parentElement;
-		what.scrollTop = what.scrollTop + (event.screenY - lastdrag_y) * (what.scrollHeight / what.offsetHeight);
-		customScrollbars();
-		lastdrag_y = event.screenY;
-	}
-
-	for (i = 0; i < document.getElementsByClassName("_SCROLLBAR").length; i++) {
-		var container = document.getElementsByClassName("_SCROLLBAR")[i];
-
-		if (document.getElementsByClassName("_SCROLLBAR")[i].getElementsByClassName("_customScrollbar")[0] == undefined) {
-			var scrollbar = document.createElement("div");
-			scrollbar.className = "_customScrollbar";
-			var scrollbarhandle = document.createElement("div");
-			scrollbar.appendChild(scrollbarhandle);
-			container.appendChild(scrollbar);
-			container.addEventListener('scroll', customScrollbars);
-			scrollbarhandle = container.getElementsByClassName("_customScrollbar")[0].getElementsByTagName("div")[0];
-			/*scrollbarhandle.setAttribute("draggable", "true");
-
-
-			scrollbarhandle.addEventListener("drag", handleDrag, false);
-			scrollbarhandle.addEventListener("dragstart", handleDragStart, false);
-		}
-
-		var scrollbarhandle = container.getElementsByClassName("_customScrollbar")[0].getElementsByTagName("div")[0];
-		container.getElementsByClassName("_customScrollbar")[0].setAttribute("style","height:"+container.offsetHeight+"px;");
-
-		scrollbarhandle.setAttribute("style","height:"+((container.offsetHeight / container.scrollHeight)*100)+"%;top:"+((container.scrollTop / container.scrollHeight)*100)+"%;");
-	}
-}*/
-
 function translateDate(dateString) { // My non-Y2.1K-compliant code. DD/MM/YY
 	var value;
 	if (lang == 'en') {
@@ -112,12 +70,4 @@ function init() {
 
 }
 
-/*function postload() {
-	if (!document.getElementsByTagName("body")[0].hasAttribute("mobile")) {
-		customScrollbars();
-		window.addEventListener('resize', customScrollbars);
-	}
-}*/
-
 document.onload = init();
-//window.addEventListener('load', postload);

@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis|Ubuntu');
-//@import 'scrollbar';
 
 body {
 	position: relative;
 	margin: 0;
 	min-width: 660px;
-	height: 100vh;
-	overflow-y: hidden;
 	background: #111;
 	color: #AAA;
 	text-shadow: 0 2px 2px #000;
@@ -22,10 +19,6 @@ body {
 * {
 	box-sizing: border-box;
 	position: relative;
-
-	::-webkit-scrollbar {
-		display: none;
-	}
 }
 
 @keyframes needJS {
@@ -218,7 +211,6 @@ header {
 	margin-top: 96px;
 	height: calc(100% - 96px);
 	overflow-x: hidden;
-	overflow-y: scroll;
 	main {
 		padding: 128px;
 		padding-top: 16px;
