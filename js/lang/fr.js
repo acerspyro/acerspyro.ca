@@ -26,7 +26,7 @@ langres = {
 	"_LANG_BUTTON": "English",
 	"_CLOSE_BUTTON": "Fermer",
 	"_TOP_TEXT": "<h1>Maxim \"Acerspyro\" Therrien</h1>\
-			<h2>Développeur web et étudiant à l'EFPC</h2>",
+			<h2>Dev web / Étudiant à l'EFPC</h2>",
 	"_SECTION_BACKSTORY": "<h3>Qui suis-je</h3>\
 					<p>\
 						Mon nom est <em>Maxim Therrien</em>, connu sous le pseudo « Acerspyro » sur le web.\

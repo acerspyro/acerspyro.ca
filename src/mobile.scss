@@ -10,6 +10,9 @@ header {
   height: 48px;
   background: #555 linear-gradient(58deg,  #555 64px, #050505 65px, #050505 68px, #F60 69px, #F60 100%) no-repeat;
 	background-position: 0 0;
+  #logo {
+    left: 0;
+  }
   .buttonContainer {
     height: 32px;
     background: #555;
@@ -29,6 +32,7 @@ header {
   }
 }
 #popupContainer {
+  position: absolute;
   top: 64px;
   #popup {
     width: 90%;
@@ -64,10 +68,14 @@ header {
 }
 section {
   font-size: 16px;
+  margin-top: 0;
   padding: 0;
   line-height: 32px;
   text-align: center;
   h3 {
     font-size: 24px;
+  }
+  p {
+    margin-left: 0;
   }
 }

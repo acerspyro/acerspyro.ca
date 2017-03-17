@@ -48,9 +48,9 @@
 	</div>
 	<div id='mainContainer'>
 		<main>
-			<span id='_TOP_TEXT'>
+			<div id='_TOP_TEXT'>
 				<div id='needJS'>This page is taking a while to load...<br/>Or are you too fancy for JavaScript?</div>
-			</span>
+			</div>
 			<div id='content'>
 				<div class='panel'>
 					<section id='_SECTION_BACKSTORY'>

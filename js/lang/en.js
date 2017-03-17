@@ -27,7 +27,7 @@ langres = {
 	"_LANG_BUTTON": "Français",
 	"_CLOSE_BUTTON": "Close",
 	"_TOP_TEXT": "<h1>Maxim \"Acerspyro\" Therrien</h1>\
-			<h2>Web developer and student at EFPC</h2>",
+			<h2>Web dev / Student at EFPC</h2>",
 	"_SECTION_BACKSTORY": "<h3>Who I am</h3>\
 					<p>\
 						My name is <em>Maxim Therrien</em>, known as <em>Acerspyro</em> on the Internet.\
