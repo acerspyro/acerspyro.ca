@@ -1,15 +1,32 @@
 <?php
+	$finalDate = "16/03/17";
+	$lang = 'en';
+	if (!isset($_COOKIE['lang'])) {
+		setcookie('lang', 'en');
+		$_COOKIE['lang'] = 'en';
+	} else {
+		$lang = $_COOKIE['lang'];
+	}
+	include "lang/$lang.php";
 	$mobile = false;
 	if (strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android'))
 		$mobile = true;
  ?>
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="<?php echo $lang; ?>">
 <head>
 	<meta content="text/html; charset=UTF-8" http-equiv="Content-type"/>
 	<meta name="theme-color" content="#F60" />
 	<link rel="shortcut icon" type="image/png" href="res/favicon.png"/>
 	<title>Acerspyro</title>
+	<script>
+		<?php
+			$ABOUT = str_replace("\n","",addslashes($_ABOUT_MSG));
+			$CONTACT = str_replace("\n","",addslashes($_CONTACT_MSG));
+			echo "var _ABOUT_MSG = \"$ABOUT\";";
+			echo "var _CONTACT_MSG = \"$CONTACT\";";
+		?>
+	</script>
 	<script src='js/main.js'></script>
 	<link rel='stylesheet' type='text/css' href='css/main.css'/>
 	<?php
@@ -30,11 +47,11 @@
 	<header>
 		<img id='logo' src='res/topicon.svg'/>
 		<div class='buttonContainer'>
-			<div id='_CODEPEN_BUTTON' class='button' onclick="window.open('http://codepen.io/acerspyro/', '_blank');">&bull;&nbsp;&bull;&nbsp;&bull;</div>
-			<div id='_GITHUB_BUTTON' class='button' onclick="window.open('https://github.com/acerspyro/', '_blank');">&bull;&nbsp;&bull;&nbsp;&bull;</div>
-			<div id='_CONTACT_BUTTON' class='button' onclick="openPopup('contact')">&bull;&nbsp;&bull;&nbsp;&bull;</div>
-			<div id='_ABOUT_BUTTON' class='button' onclick="openPopup('about')">&bull;&nbsp;&bull;&nbsp;&bull;</div>
-			<div id='_LANG_BUTTON' class='button' onclick="changeLang()">&bull;&nbsp;&bull;&nbsp;&bull;</div>
+			<div class='button' onclick="window.open('http://codepen.io/acerspyro/', '_blank');"><?php echo $_CODEPEN_BUTTON; ?></div>
+			<div class='button' onclick="window.open('https://github.com/acerspyro/', '_blank');"><?php echo $_GITHUB_BUTTON; ?></div>
+			<div class='button' onclick="openPopup('contact')"><?php echo $_CONTACT_BUTTON; ?></div>
+			<div class='button' onclick="openPopup('about')"><?php echo $_ABOUT_BUTTON; ?></div>
+			<div class='button' onclick="changeLang()"><?php echo $_LANG_BUTTON; ?></div>
 		</div>
 	</header>
 	<div id='popupContainer'>
@@ -42,26 +59,30 @@
 			<div id='_MESSAGE'>
 			</div>
 			<div class='buttonContainer'>
-				<div id='_CLOSE_BUTTON' class='button' onclick="closePopup()"></div>
+				<div class='button' onclick="closePopup()"><?php echo $_CLOSE_BUTTON; ?></div>
 			</div>
 		</div>
 	</div>
 	<div id='mainContainer'>
 		<main>
-			<div id='_TOP_TEXT'>
-				<div id='needJS'>This page is taking a while to load...<br/>Or are you too fancy for JavaScript?</div>
+			<div id='title'>
+				<?php echo $_TOP_TEXT; ?>
 			</div>
 			<div id='content'>
 				<div class='panel'>
-					<section id='_SECTION_BACKSTORY'>
+					<section>
+						<?php echo $_SECTION_BACKSTORY; ?>
 					</section>
-					<section id='_SECTION_SKILLS'>
+					<section>
+						<?php echo $_SECTION_SKILLS; ?>
 					</section>
 				</div>
 				<div class='panel'>
-					<section id='_SECTION_INTRO'>
+					<section>
+						<?php echo $_SECTION_INTRO; ?>
 					</section>
-					<section id='_SECTION_PROJECTS'>
+					<section>
+						<?php echo $_SECTION_PROJECTS; ?>
 					</section>
 				</div>
 				<iframe height='300' scrolling='no' src='http://codepen.io/acerspyro/embed/preview/ZbmzJN/?height=300&theme-id=20938&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
