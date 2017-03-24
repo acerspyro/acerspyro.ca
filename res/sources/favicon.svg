@@ -9,16 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="64"
-   height="64"
-   viewBox="0 0 64 64"
+   width="34"
+   height="34"
+   viewBox="0 0 34 34"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="favicon.svg"
-   inkscape:export-filename="/home/acerspyro/Projects/acerspyro.ca/res/favicon.png"
-   inkscape:export-xdpi="120"
-   inkscape:export-ydpi="120">
+   sodipodi:docname="favicon.svg">
   <defs
      id="defs4">
     <filter
@@ -189,17 +186,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="46.96499"
-     inkscape:cy="16.50843"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="15.840571"
+     inkscape:cy="34.937788"
      inkscape:document-units="px"
-     inkscape:current-layer="g4229"
+     inkscape:current-layer="layer1"
      showgrid="true"
      units="px"
      inkscape:snap-intersection-paths="true"
      inkscape:object-nodes="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1023"
+     inkscape:window-height="974"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -234,30 +231,15 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(18.996094,-972.3622)">
+     transform="translate(18.996094,-1002.3622)">
     <g
-       id="g4229"
-       transform="translate(-91,0)">
-      <g
-         id="g4192"
-         transform="matrix(1.2802124,0,0,1.2802124,-35.54449,-291.67641)">
-        <g
-           style="fill:#0080ff;fill-opacity:1;filter:url(#filter4426)"
-           id="g4216"
-           transform="translate(-57.996094,-8)">
-          <path
-             inkscape:connector-curvature="0"
-             id="path4197"
-             transform="translate(90.003906,1004.3622)"
-             d="m 77.996094,0 0,32 4,0 0,-16 0,-8.4511719 0,-3.5488281 10,0 a 6,6 0 0 1 6,6 6,6 0 0 1 -6,6 l 0,0.0039 -0.002,-0.0039 -4.716797,0 9.998047,16 4.716796,0 -7.675781,-12.285156 A 10,10 0 0 0 101.99609,10 10,10 0 0 0 91.996094,0 l -10,0 -4,0 z"
-             style="fill:#0080ff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-        </g>
-        <path
-           inkscape:connector-curvature="0"
-           id="rect4178"
-           d="m 104,996.3622 -19.996094,32 4.716797,0 L 104,1003.911 l 0,8.4512 -2.92187,0 -2.500005,4 5.421875,0 0,12 4,0 0,-32 -4,0 z"
-           style="fill:#0080ff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4414)" />
-      </g>
-    </g>
+       style="filter:url(#filter4438)"
+       id="g4220"
+       transform="translate(-91,-7.9999826)" />
+    <path
+       id="rect4178"
+       style="fill:#0080ff;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter4414)"
+       d="m 2.003906,1002.3622 -19.996094,32 4.716797,0 15.279297,-24.4512 0,8.4512 -2.92187,0 -2.500005,4 5.421875,0 0,12 4.0000001,0 0,-32 -4.0000001,0 z m 8,28 4,0 0,4 -4,0 z m 0,-28 4,0 0,24 -4,0 z"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
