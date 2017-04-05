@@ -56,10 +56,13 @@
 	</header>
 	<div id='popupContainer'>
 		<div id='popup'>
-			<div id='_MESSAGE'>
-			</div>
-			<div class='buttonContainer'>
-				<div class='button' onclick="closePopup()"><?php echo $_CLOSE_BUTTON; ?></div>
+			<div>
+				<span id='_MESSAGE'>
+
+				</span>
+				<span>
+					<?php echo $_CLOSE_POPUP; ?>
+				</span>
 			</div>
 		</div>
 	</div>

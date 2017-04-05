@@ -9,7 +9,7 @@ $_ABOUT_MSG = "
 		Dernière révision effectuée le $finalDate.<br/>Design par Maxim \"Acerspyro\" Therrien (si c'était pas clair).
 	</p>
 	<p>
-		<a href='https://github.com/acerspyro/acerspyro.ca/'>https://github.com/acerspyro/acerspyro.ca/</a>
+		<a href='https://github.com/acerspyro/acerspyro.ca/'>Projet sur GitHub</a>
 	</p>
 ";
 
@@ -27,7 +27,7 @@ $_GITHUB_BUTTON = "GitHub";
 $_CONTACT_BUTTON = "Contacter";
 $_ABOUT_BUTTON = "À propos";
 $_LANG_BUTTON = "English";
-$_CLOSE_BUTTON = "Fermer";
+$_CLOSE_POPUP = "Cliquez pour fermer la bulle";
 
 $_TOP_TEXT = "
 	<h1>Maxim \"Acerspyro\" Therrien</h1>

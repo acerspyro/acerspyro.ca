@@ -32,22 +32,18 @@ header {
   }
 }
 #popupContainer {
-  position: absolute;
-  top: 64px;
   #popup {
-    width: 90%;
-    #_MESSAGE {
-      padding: 16px 4px 24px 4px;
-      font-size: 12px;
-    }
-    .buttonContainer {
-    	.button {
-    		height: 24px;
-    		top: -24px;
-    		font-size: 16px;
-    		border-top: 1px solid #0046C8;
-    		margin: 0 2px;
-    	}
+    width: 90vw;
+    height: 90vw;
+    font-size: 16px;
+  }
+}
+@media (orientation: landscape) {
+  #popupContainer {
+    #popup {
+      width: 90vh;
+      height: 90vh;
+      font-size: 16px;
     }
   }
 }

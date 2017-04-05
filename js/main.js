@@ -9,22 +9,41 @@ function changeLang() {
 }
 
 function openPopup(which) {
-	if (document.getElementById("popup").className.search(which) == -1) {
-		if (document.getElementById("popup").className.search('open') == -1) {
+	document.getElementById("popupContainer").addEventListener("click", function(e) {
+		e.stopPropagation();
+		closePopup();
+	});
+	if (document.getElementById("popup").className.search('anim_in') == -1) {
+		document.getElementById("_MESSAGE").innerHTML = window["_"+which.toUpperCase()+"_MSG"];
+		var popup = document.getElementById("popup");
+	  var popupContainer = document.getElementById("popupContainer");
+	  popup.classList.remove("anim_out");
+	  void popup.offsetWidth;
+	  popup.classList.add("anim_in");
+	  popupContainer.style.display = "flex";
+	} else {
+		closePopup();
+		setTimeout(function() {
 			document.getElementById("_MESSAGE").innerHTML = window["_"+which.toUpperCase()+"_MSG"];
-			document.getElementById("popup").className = `popup open ${which}`;
-		} else {
-			closePopup();
-			setTimeout(function(){
-				document.getElementById("_MESSAGE").innerHTML = window["_"+which.toUpperCase()+"_MSG"];
-				document.getElementById("popup").className = `popup open ${which}`;
-			}, 250);
-		}
+			var popup = document.getElementById("popup")
+		  var popupContainer = document.getElementById("popupContainer");
+		  popup.classList.remove("anim_out");
+		  void popup.offsetWidth;
+		  popup.classList.add("anim_in");
+		  popupContainer.style.display = "flex";
+		}, getComputedStyle(document.getElementById("popup")).animationDuration.replace(/[^\d.-]/g, '')*1000);
 	}
 }
 
 function closePopup() {
-	document.getElementById("popup").className = "popup";
+	var popup = document.getElementById("popup");
+  var popupContainer = document.getElementById("popupContainer");
+  popup.classList.remove("anim_in");
+  void popup.offsetWidth;
+  popup.classList.add("anim_out");
+  setTimeout(function() {
+    popupContainer.style.display = "none";
+  }, getComputedStyle(popup).animationDuration.replace(/[^\d.-]/g, '')*1000);
 }
 
 function init() {
