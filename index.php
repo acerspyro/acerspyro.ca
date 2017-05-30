@@ -1,6 +1,7 @@
 <?php
 	$finalDate = "16/03/17";
 	$lang = 'en';
+	$userAgent = strtolower(isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '');
 	if (!isset($_COOKIE['lang'])) {
 		setcookie('lang', 'en');
 		$_COOKIE['lang'] = 'en';
@@ -9,7 +10,7 @@
 	}
 	include "lang/$lang.php";
 	$mobile = false;
-	if (strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android'))
+	if (strstr($userAgent, 'mobile') || strstr($userAgent, 'android'))
 		$mobile = true;
  ?>
 <!DOCTYPE HTML>
