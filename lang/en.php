@@ -40,20 +40,20 @@ $_SECTION_BACKSTORY = "
 	</p>
 	<p>
 		I am an 18 year old computer enthusiast who enjoys finding ways to use technology to make cool stuff.
-		I study at EFPC (<i>École de Formation Professionelle de Châteauguay</i>) in tech support.
+		I am currently studying at EFPC (<i>École de Formation Professionelle de Châteauguay</i>) in tech support.
 		My native tongue is French and I reside in the south shore of Montreal.
 	</p>
 	<p>
-		Do you run a small business and need a nice website? I am actively looking for web projects to work on, and I'd be more than happy to put together whatever it is you have in mind!
+		Do you run a small business and need a nice website? I am actively looking for web projects to work on, and I would be more than happy to put together whatever it is you have in mind!
 	</p>
 ";
 $_SECTION_SKILLS = "
 	<h3>Skills</h3>
 	<p>
-		I am very fluent in both French and English.<br/>
-		I can easily work with Microsoft's Office suite as well as Google Docs and LibreOffice.<br/>
+		I am fluent in both French and English.<br/>
+		Working with either Microsoft's Office suite, Google Docs or even LibreOffice is no problem for me.<br/>
 		I can count up to 10 and more, and I use Linux as my day to day operating system, meaning I will have no problem dealing with a Linux installation.<br/>
-		I do all of my graphics work with Inkscape and GIMP (because they're free and awesome!)
+		All of my graphics work is done with Inkscape and GIMP (because they're free and awesome!)
 	</p>
 ";
 $_SECTION_INTRO = "
@@ -62,7 +62,7 @@ $_SECTION_INTRO = "
 		This website has a lot of \"I\"'s, doesn't it? Anyways.
 	</p>
 	<p>
-		I like to stick around on Freenode's IRC, often in #web where I help people with everything webdev-related.
+		You can find me on Freenode's IRC in #web, where I stick around to help people with everything webdev-related.
 	</p>
 	<p>
 		Vector art assets are my thing, even my raster graphics often start out as vector art in Inkscape.
