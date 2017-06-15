@@ -3,7 +3,7 @@
 
 $_ABOUT_MSG = "
 	<p>
-		This site was made by hand with love and passion using HTML5, SCSS and JS6.
+		This site was made by hand using HTML5, SCSS and JS6.
 	</p>
 	<p>
 		Last revision made on $finalDate.<br/>Design by Maxim \"Acerspyro\" Therrien (if it wasn't obvious).
@@ -52,15 +52,12 @@ $_SECTION_SKILLS = "
 	<p>
 		I am fluent in both French and English.<br/>
 		Working with either Microsoft's Office suite, Google Docs or even LibreOffice is no problem for me.<br/>
-		I can count up to 10 and more, and I use Linux as my day to day operating system, meaning I will have no problem dealing with a Linux installation.<br/>
+		I spend the majority of my time in the Linux terminal, meaning I will have no problem dealing with a UNIX system.<br/>
 		All of my graphics work is done with Inkscape and GIMP (because they're free and awesome!)
 	</p>
 ";
 $_SECTION_INTRO = "
 	<h3>What I do</h3>
-	<p>
-		This website has a lot of \"I\"'s, doesn't it? Anyways.
-	</p>
 	<p>
 		You can find me on Freenode's IRC in #web, where I stick around to help people with everything webdev-related.
 	</p>

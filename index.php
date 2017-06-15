@@ -1,5 +1,5 @@
 <?php
-	$finalDate = "16/03/17";
+	$finalDate = "15/06/17";
 	$lang = 'en';
 	$userAgent = strtolower(isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '');
 	if (!isset($_COOKIE['lang'])) {

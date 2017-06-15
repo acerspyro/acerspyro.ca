@@ -3,7 +3,7 @@
 
 $_ABOUT_MSG = "
 	<p>
-		Ce site à été fait à la main avec amour et passion, à l'aide de HTML5, SCSS ainsi que JS6.
+		Ce site à été fait à la main à l'aide de HTML5, SCSS ainsi que JS6.
 	</p>
 	<p>
 		Dernière révision effectuée le $finalDate.<br/>Design par Maxim \"Acerspyro\" Therrien (si c'était pas clair).
@@ -49,7 +49,7 @@ $_SECTION_SKILLS = "
 	<p>
 		Je suis très fluide en anglais aussi bien qu'en français.<br/>
 		J'ai de la façilité à utiliser la suite Microsoft Office, ainsi que Google Docs et LibreOffice.<br/>
-		Je peux compter jusqu'à dix et plus encore, et j'utilise Linux comme système d'exploitation primaire, signifiant que je n'aurai aucun problème à m'occuper d'un poste Linux.<br/>
+		Je passe la majorité de mon temps sur des terminaux Linux, signifiant que je n'aurai aucun problème à m'occuper d'un poste UNIX.<br/>
 		Je fais tout mon travail graphique à l'aide de GIMP et Inkscape (parce qu'ils sont libres et géniaux!)
 	</p>
 ";
