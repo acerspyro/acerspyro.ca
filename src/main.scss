@@ -80,8 +80,9 @@ header {
 	position: fixed;
 	display: flex;
 	top: 0;
-	background: #555 linear-gradient(58deg,  #555 128px, #050505 129px, #050505 136px, #F60 137px, #F40 100%) no-repeat;
-	background-position: 132px 0;
+	//background: #555 linear-gradient(58deg,  #555 128px, #050505 129px, #050505 136px, #F60 137px, #F40 100%) no-repeat;
+	background: #555 linear-gradient(58deg, #F60 0px, #F40 100%) no-repeat;
+	//background-position: 132px 0;
 	box-shadow: 0 0 8px #000;
 	transition: all 0.2s;
 	#logo {

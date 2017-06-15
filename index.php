@@ -14,55 +14,42 @@
 		$mobile = true;
  ?>
 <!DOCTYPE HTML>
-<html lang="<?php echo $lang; ?>">
+<html lang="<?=$lang;?>">
 <head>
 	<meta content="text/html; charset=UTF-8" http-equiv="Content-type"/>
 	<meta name="theme-color" content="#F60" />
 	<link rel="shortcut icon" type="image/png" href="res/favicon.png"/>
 	<title>Acerspyro</title>
 	<script>
-		<?php
-			$ABOUT = str_replace("\n","",addslashes($_ABOUT_MSG));
-			$CONTACT = str_replace("\n","",addslashes($_CONTACT_MSG));
-			echo "var _ABOUT_MSG = \"$ABOUT\";";
-			echo "var _CONTACT_MSG = \"$CONTACT\";";
-		?>
+		<?="var _ABOUT_MSG = \"" . str_replace("\n","",addslashes($_ABOUT_MSG)) . "\";";?>
+		<?="var _CONTACT_MSG = \"" . str_replace("\n","",addslashes($_CONTACT_MSG)) ."\";";?>
 	</script>
 	<script src='js/main.js'></script>
 	<link rel='stylesheet' type='text/css' href='css/main.css'/>
-	<?php
-		if ($mobile) {
-			echo "<meta name=\"HandheldFriendly\" content=\"true\" />";
-			echo "<meta name=\"MobileOptimized\" content=\"320\" />";
-			echo "<meta name=\"viewport\" content=\"initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no\" />";
-			echo "<link rel='stylesheet' type='text/css' href='css/mobile.css'/>";
-		}
-	 ?>
+	<?php if ($mobile): ?>
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="MobileOptimized" content="320" />
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+		<link rel='stylesheet' type='text/css' href='css/mobile.css'/>
+	<?php endif ?>
 </head>
-<?php
-	if ($mobile)
-		echo "<body mobile>";
-	else
-		echo "<body>";
- ?>
+<?=$mobile?"<body mobile>":"<body>";?>
 	<header>
 		<img id='logo' src='res/topicon.svg'/>
 		<div class='buttonContainer'>
-			<div class='button' onclick="window.open('http://codepen.io/acerspyro/', '_blank');"><?php echo $_CODEPEN_BUTTON; ?></div>
-			<div class='button' onclick="window.open('https://github.com/acerspyro/', '_blank');"><?php echo $_GITHUB_BUTTON; ?></div>
-			<div class='button' onclick="openPopup('contact')"><?php echo $_CONTACT_BUTTON; ?></div>
-			<div class='button' onclick="openPopup('about')"><?php echo $_ABOUT_BUTTON; ?></div>
-			<div class='button' onclick="changeLang()"><?php echo $_LANG_BUTTON; ?></div>
+			<div class='button' onclick="window.open('http://codepen.io/acerspyro/', '_blank');"><?=$_CODEPEN_BUTTON;?></div>
+			<div class='button' onclick="window.open('https://github.com/acerspyro/', '_blank');"><?=$_GITHUB_BUTTON;?></div>
+			<div class='button' onclick="openPopup('contact')"><?=$_CONTACT_BUTTON;?></div>
+			<div class='button' onclick="openPopup('about')"><?=$_ABOUT_BUTTON;?></div>
+			<div class='button' onclick="changeLang()"><?=$_LANG_BUTTON;?></div>
 		</div>
 	</header>
 	<div id='popupContainer'>
 		<div id='popup'>
 			<div>
-				<span id='_MESSAGE'>
-
-				</span>
+				<span id='_MESSAGE'></span>
 				<span>
-					<?php echo $_CLOSE_POPUP; ?>
+					<?=$_CLOSE_POPUP;?>
 				</span>
 			</div>
 		</div>
@@ -70,23 +57,23 @@
 	<div id='mainContainer'>
 		<main>
 			<div id='title'>
-				<?php echo $_TOP_TEXT; ?>
+				<?=$_TOP_TEXT;?>
 			</div>
 			<div id='content'>
 				<div class='panel'>
 					<section>
-						<?php echo $_SECTION_BACKSTORY; ?>
+						<?=$_SECTION_BACKSTORY;?>
 					</section>
 					<section>
-						<?php echo $_SECTION_SKILLS; ?>
+						<?=$_SECTION_SKILLS;?>
 					</section>
 				</div>
 				<div class='panel'>
 					<section>
-						<?php echo $_SECTION_INTRO; ?>
+						<?=$_SECTION_INTRO;?>
 					</section>
 					<section>
-						<?php echo $_SECTION_PROJECTS; ?>
+						<?=$_SECTION_PROJECTS;?>
 					</section>
 				</div>
 				<iframe height='300' scrolling='no' src='http://codepen.io/acerspyro/embed/preview/ZbmzJN/?height=300&theme-id=20938&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>
