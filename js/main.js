@@ -63,3 +63,12 @@ function init() {
 }
 
 document.onload = init();
+window.addEventListener('scroll', (e)=>{
+	var header = document.getElementsByTagName("header")[0];
+	var triggervalue = 96;
+
+	if (document.body.scrollTop <= triggervalue && header.classList.contains("short"))
+		header.classList.remove("short");
+	else if (document.body.scrollTop > triggervalue && !header.classList.contains("short"))
+		header.classList.add("short");
+})

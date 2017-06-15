@@ -3,7 +3,7 @@ body {
   position: relative;
   margin: 0;
   min-width: 660px;
-  background: #111;
+  background: #222;
   color: #FFF;
   text-shadow: 0 2px 2px #000;
   font-family: Ubuntu;
@@ -67,11 +67,14 @@ header {
   background: #555 linear-gradient(58deg, #F60 0px, #F40 100%) no-repeat;
   box-shadow: 0 0 8px #000;
   transition: all 0.2s; }
+  header.short {
+    height: 48px; }
+    header.short #logo {
+      left: 0px; }
   header #logo {
     position: absolute;
     height: 100%;
     transition: all 0.2s;
-    height: 100%;
     left: 128px; }
   header .buttonContainer {
     position: absolute;

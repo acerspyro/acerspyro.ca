@@ -4,7 +4,7 @@ body {
 	position: relative;
 	margin: 0;
 	min-width: 660px;
-	background: #111;
+	background: #222;
 	color: #FFF;
 	text-shadow: 0 2px 2px #000;
 	font-family: Ubuntu;
@@ -85,11 +85,16 @@ header {
 	//background-position: 132px 0;
 	box-shadow: 0 0 8px #000;
 	transition: all 0.2s;
+	&.short {
+		height: 48px;
+		#logo {
+			left: 0px;
+		}
+	}
 	#logo {
 		position: absolute;
 		height: 100%;
 		transition: all 0.2s;
-		height: 100%;
 		left: 128px;
 	}
 	.buttonContainer {
