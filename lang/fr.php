@@ -56,10 +56,11 @@ $_SECTION_SKILLS = "
 $_SECTION_INTRO = "
 	<h3>Que fais-je</h3>
 	<p>
-		J'aime me tenir sur les canaux IRC, surtout dans #web où j'assiste des développeurs avec tout ce qui rapporte au développement web.
+		Je fais surtout du développement web, mais je fais aussi du 3D ainsi que de la création de niveau.<br/>
+		En dehors de l'école et du travail, je contribue à des projets FOSS. Les graphiques vectoriels, c'est mon domaine.
 	</p>
 	<p>
-		L'art graphique est ma chose, mes graphiques raster originent souvent d'Inkscape pour être par la suite édités dans GIMP.
+		Je suis toujours dans le serveur IRC de Freenode, surtout dans #web où j'assiste d'autres développeurs avec tout ce qui rapporte au développement web.
 	</p>
 ";
 $_SECTION_PROJECTS = "

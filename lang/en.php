@@ -59,10 +59,11 @@ $_SECTION_SKILLS = "
 $_SECTION_INTRO = "
 	<h3>What I do</h3>
 	<p>
-		You can find me on Freenode's IRC in #web, where I stick around to help people with everything webdev-related.
+		I mostly do web dev, but I also do mapping as well as 3D modeling.<br/>
+		Outside of school and work, I contribute to FOSS projects. Vector art assets are my thing.
 	</p>
 	<p>
-		Vector art assets are my thing, even my raster graphics often start out as vector art in Inkscape.
+		You can find me on Freenode's IRC in #web, where I stick around and help people with everything web dev-related.
 	</p>
 ";
 $_SECTION_PROJECTS = "
