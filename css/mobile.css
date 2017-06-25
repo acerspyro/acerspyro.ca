@@ -7,8 +7,7 @@ header {
   position: relative;
   min-width: 0;
   height: 48px;
-  background: #555 linear-gradient(58deg, #555 64px, #050505 65px, #050505 68px, #F60 69px, #F60 100%) no-repeat;
-  background-position: 0 0; }
+  background-position: 40px 0; }
   header #logo {
     left: 0; }
   header .buttonContainer {
