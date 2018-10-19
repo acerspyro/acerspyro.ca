@@ -1,0 +1,24 @@
+{
+  "name": "acerspyro-ca",
+  "version": "3.0.0",
+  "description": "Professional web site for Maxim \"Acerspyro\" Therrien",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acerspyro/acerspyro.ca.git"
+  },
+  "keywords": [
+    "acerspyro",
+    "maxim",
+    "therrien"
+  ],
+  "author": "Maxim \"Acerspyro\" Therrien",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acerspyro/acerspyro.ca/issues"
+  },
+  "homepage": "https://github.com/acerspyro/acerspyro.ca#readme"
+}

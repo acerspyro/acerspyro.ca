@@ -1,74 +1,32 @@
-var lang;
+function embedSVG() {
+  $("span.embed-svg").each((i,elem)=>{
+    let attr = {};
+    let uid  = Math.floor(Math.random() * (Math.pow(2,32))).toString(16);
+    while ($(`#${uid}`).length > 0) { // Protection, in the rare case where we would have the same 32-bit hexadecimal value twice
+      uid = Math.floor(Math.random() * (Math.pow(2,32))).toString(16);
+    }
 
-function changeLang() {
-	if (lang=='en')
-		document.cookie='lang=fr;expires=999999999999999999';
-	else
-		document.cookie='lang=en;expires=999999999999999999';
-	location.reload();
+    attr['width']     = ($(elem).attr('width') ? $(elem).attr('width') : "auto");
+    attr['height']    = ($(elem).attr('height') ? $(elem).attr('height') : "auto");
+    attr['src']       = $(elem).attr('src');
+    attr['style']     = ($(elem).attr('style') ? $(elem).attr('style') : "");
+    attr['svg-style'] = ($(elem).attr('svg-style') ? $(elem).attr('svg-style') : "");
+    attr['class']     = $(elem).attr('class').replace(/(\s|^)(embed\-svg)+(?=(\s|$))/,"");
+
+    $.get(attr['src'], (m)=>{
+      $(elem).replaceWith(`<span id='${uid}' class='embedded-svg' style="${attr['style']}">${m.documentElement.outerHTML}</span>`);
+      $(`#${uid}`).children("svg").removeAttr('width', 'height').css({
+        'width': attr['width'],
+        'height': attr['height']
+      });
+      $(`#${uid}`).children("svg").children().attr('style', attr['svg-style']);
+      if (attr['class'].length) {
+        $(`#${uid}`).attr('class', $(`#${uid}`).attr('class')+" "+attr['class']);
+      }
+    });
+  });
 }
 
-function openPopup(which) {
-	document.getElementById("popupContainer").addEventListener("click", function(e) {
-		e.stopPropagation();
-		closePopup();
-	});
-	if (document.getElementById("popup").className.search('anim_in') == -1) {
-		document.getElementById("_MESSAGE").innerHTML = window["_"+which.toUpperCase()+"_MSG"];
-		var popup = document.getElementById("popup");
-	  var popupContainer = document.getElementById("popupContainer");
-	  popup.classList.remove("anim_out");
-	  void popup.offsetWidth;
-	  popup.classList.add("anim_in");
-	  popupContainer.style.display = "flex";
-	} else {
-		closePopup();
-		setTimeout(function() {
-			document.getElementById("_MESSAGE").innerHTML = window["_"+which.toUpperCase()+"_MSG"];
-			var popup = document.getElementById("popup")
-		  var popupContainer = document.getElementById("popupContainer");
-		  popup.classList.remove("anim_out");
-		  void popup.offsetWidth;
-		  popup.classList.add("anim_in");
-		  popupContainer.style.display = "flex";
-		}, getComputedStyle(document.getElementById("popup")).animationDuration.replace(/[^\d.-]/g, '')*1000);
-	}
-}
-
-function closePopup() {
-	var popup = document.getElementById("popup");
-  var popupContainer = document.getElementById("popupContainer");
-  popup.classList.remove("anim_in");
-  void popup.offsetWidth;
-  popup.classList.add("anim_out");
-  setTimeout(function() {
-    popupContainer.style.display = "none";
-  }, getComputedStyle(popup).animationDuration.replace(/[^\d.-]/g, '')*1000);
-}
-
-function init() {
-	var c=document.cookie.split(';');
-
-	for (i=0;i<c.length;i++) {
-		if (c[i].split('=')[0] == 'lang') {
-			lang=c[i].split('=')[1];
-			break;
-		}
-	}
-
-	if (lang == undefined) {
-		document.cookie='lang=en;expires=999999999999999999';
-		lang='en';
-	}
-}
-
-document.onload = init();
-window.addEventListener('scroll', (e)=>{
-	var header = document.getElementsByTagName("header")[0];
-	var triggervalue = 96;
-
-	if (document.body.scrollTop <= triggervalue && header.classList.contains("short"))
-		header.classList.remove("short");
-	else if (document.body.scrollTop > triggervalue && !header.classList.contains("short"))
-		header.classList.add("short");
-})
+$(document).ready(()=>{
+  embedSVG();
+});

@@ -1,0 +1,19 @@
+@import '_main.scss';
+
+.navbar.header {
+  background-color: #333;
+  border-bottom: 3px solid #FF5F00;
+  .nav-item {
+    color: #FFF;
+    a:link {
+      color: #FFF;
+    }
+    a:visited {
+      color: #FFF;
+    }
+  }
+}
+
+.svg-logo1 path {
+  fill: #CCC;
+}
