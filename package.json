@@ -1,10 +1,12 @@
 {
   "name": "acerspyro-ca",
-  "version": "3.0.0",
+  "version": "2.0.0",
   "description": "Professional web site for Maxim \"Acerspyro\" Therrien",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass src/ -o public/css/",
+    "sass:watch": "node-sass src/ -wo public/css/"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/acerspyro/acerspyro.ca/issues"
   },
-  "homepage": "https://github.com/acerspyro/acerspyro.ca#readme"
+  "homepage": "https://github.com/acerspyro/acerspyro.ca#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "handlebars": "^4.0.12",
+    "node-sass": "^4.9.4"
+  },
+  "watches": {
+    "sass": "src/*.scss"
+  }
 }
